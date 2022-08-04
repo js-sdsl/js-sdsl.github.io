@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Js-sdsl document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="/assets/logo-removebg.png">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.min.css">
+  <link href="https://cdn.bootcss.com/KaTeX/0.10.0/katex.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/KaTeX/0.10.0/katex.min.js"></script>
+  <style>
+    .sidebar ul li a, body {
+      font-size: 1rem;
+    }
+
+    .markdown-section {
+      max-width: 800px;
+      margin: 0;
+      margin-left: 300px;
+    }
+
+    @media screen and (max-width: 1700px) {
+      .markdown-section {
+          margin: 0 auto;
+          padding-left: 50px;
+          padding-right: 50px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      body.close .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Js-sdsl',
+      nameLink: {
+        '/zh-cn/': '/zh-cn/',
+        '/': '/',
+      },
+      maxLevel: 4,
+      subMaxLevel: 2,
+      auto2top: true,
+      loadNavbar: true,
+      autoHeader: true,
+      mergeNavbar: true,
+      loadSidebar: true,
+      routerMode: 'history',
+      coverpage: ['/', '/zh-cn/'],
+      count:{
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90, 90, 90)'
+      },
+      pagination: {
+        previousText: {
+          '/zh-cn/': '上一章节',
+          '/': 'Pre',
+        },
+        nextText: {
+          '/zh-cn/': '下一章节',
+          '/': 'Next',
+        },
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      search: {
+        maxAge: 24 * 60 * 60,
+        paths: 'auto',
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': 'Type to search',
+        },
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': 'No Results',
+        },
+        depth: 3,
+        pathNamespaces: ['/zh-cn', '/'],
+        hideOtherSidebarContent: false
+      },
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "tex") {
+              return `<span class="tex">
+                        ${katex.renderToString(code)}
+                      </span>`;
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+      repo: 'https://github.com/zly201/js-sdsl'
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+</body>
+</html>
