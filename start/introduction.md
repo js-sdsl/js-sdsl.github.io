@@ -1,4 +1,4 @@
-## Js-sdsl 是什么
+## What Is Js-sdsl
 
 Js-sdsl 是一款参考 C++ STL 实现的 JavaScript 标准数据结构库，用于弥补 JavaScript 中缺少一些数据结构的缺点
 
@@ -19,7 +19,7 @@ Js-sdsl 是一款参考 C++ STL 实现的 JavaScript 标准数据结构库，用
 
 如果你想知道更多关于 Js-sdsl 与其他主流库的对比信息，请参考与其他库的对比
 
-## 起步
+## Start
 
 如果你是用的是浏览器，我们提供 cdn 引入
 ```html
@@ -35,9 +35,9 @@ Js-sdsl 是一款参考 C++ STL 实现的 JavaScript 标准数据结构库，用
 npm i js-sdsl
 ```
 
-## 使用
+## Usage
 
-### 在浏览器中使用
+### Using For Browser
 
 ```html
 <script src="https://zly201.github.io/js-sdsl/js-sdsl.min.js" />
@@ -60,7 +60,7 @@ npm i js-sdsl
 </script>
 ```
 
-### npm 引入
+### Npm
 
 ```javascript
 // esModule
@@ -72,6 +72,6 @@ myOrderedMap.setElement(1, 2);
 console.log(myOrderedMap.getElementByKey(1)); // 2
 ```
 
-## 准备好了吗？
+## Ready?
 
 我们刚才简单的介绍了 Js-sdsl，接下来将从容器类别开始进行更加深入的学习！

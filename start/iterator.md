@@ -15,7 +15,7 @@ for (const u of v) {
 }
 ```
 
-## 独有的双向迭代器
+## Bidirectional Iterator
 
 和 C++ 一样，我们提供正向 (normal) / 反向 (reverse) 两种迭代器模式，同时为支持迭代器的容器提供了 `begin`，`end`，`rBegin`，`rEnd` 四个函数
 
