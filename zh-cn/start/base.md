@@ -1,6 +1,6 @@
 Vector 是 C++ STL 中的一种简单结构，用于动态分配内存，以避免出现内存泄漏的情况
 
-由于 Javascript 中存在垃圾回收机制，所以我们不需要担心发生内存泄漏的情况，但在以下几个方面的考虑下，JS-sdsl 依然提供了 Vector 这一容器：
+由于 Javascript 中存在垃圾回收机制，所以我们不需要担心发生内存泄漏的情况，但在以下几个方面的考虑下，JS-sdsl 依然提供了 Vector 这一容器: 
 
 1. 扩充 Array 的 API
 2. 提供给 Js-sdsl 的其他容器作为参考
@@ -10,7 +10,7 @@ Vector 是 C++ STL 中的一种简单结构，用于动态分配内存，以避�
 
 ## constructor
 
-Js-sdsl 中所有的容器都有一个构造器，接收一个具有 `forEach` 可迭代函数的对象，用于初始化，以 Vector 为例：
+Js-sdsl 中所有的容器都有一个构造器，接收一个具有 `forEach` 可迭代函数的对象，用于初始化，以 Vector 为例: 
 
 ```javascript
 new Vector();

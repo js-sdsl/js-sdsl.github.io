@@ -11,7 +11,9 @@
   - [TypeScript 支持](/zh-cn/advance/typescript-support.md "TypeScript 支持")
   - [Vector 原理](/zh-cn/advance/vector.md "Vector 原理")
   - [LinkList 原理](/zh-cn/advance/linklist.md "LinkList 原理")
-  - [Deque 原理](/zh-cn/advance/deque.md "LinkList 原理")
+  - [Deque 原理](/zh-cn/advance/deque.md "Deque 原理")
+  - [PriorityQueue 原理](/zh-cn/advance/priority-queue.md "PriorityQueue 原理")
+  - [TreeContainer 原理](/zh-cn/advance/tree-container.md "TreeContainer 原理")
 
 - **关于测试**
   - [单元测试](/zh-cn/test/unit-test.md "单元测试")

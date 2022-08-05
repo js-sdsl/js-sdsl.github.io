@@ -6,7 +6,7 @@ LinkNode 是内置的链表指针，是双向的，包含 `pre`，`next` 和 `va
 
 LinkList 继承于抽象类 `SequentialContainer`，其本质上是一个循环链表，内部封装了 `header`，`head` 和 `tail` 三个 LinkNode，其中 `header` 是容器的超尾指针
 
-当期初始化时，内部指针指向如下：
+当期初始化时，内部指针指向如下: 
 
 ```tex
 null \leftarrow head \rightarrow null \\

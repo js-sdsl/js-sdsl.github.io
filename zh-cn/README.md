@@ -96,7 +96,7 @@ console.log(myOrderedMap.getElementByKey(1)); // 2
 
 我们对于编写的所有 API 进行了性能测试，并将结果同步到了 `testResult.txt` 中，你可以通过 `yarn test:performance` 命令来重现它
 
-以下是性能测试结果的一部分：
+以下是性能测试结果的一部分: 
 
 ```bash
 =================================== OrderedSet ===================================
@@ -139,7 +139,7 @@ console.log(myOrderedMap.getElementByKey(1)); // 2
 
 ### 贡献者
 
-感谢对本项目做出贡献的开发者们：
+感谢对本项目做出贡献的开发者们: 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
