@@ -8,8 +8,8 @@ Js-sdsl 中的树容器 OrderedSet 和 OrderedMap 继承于 `TreeContainer`，�
 
 节点中拥有以下几个属性:
 
-```javascript
-class TreeNode {
+```typescript
+class TreeNode<K, V> {
     ...
     color = true;                                       // 节点颜色 (red: true, black: false)
     key: K | undefined = undefined;                     // 节点 key 值
@@ -22,4 +22,30 @@ class TreeNode {
 }
 ```
 
-并且拥有用于左旋、右旋和自移除三个函数
+并且拥有用于左旋、右旋和自移除的三个函数
+
+## TreeContainer
+
+TreeContainer 是 `OrderedSet` 和 `OrderedMap` 的抽象父类，内置的是变种红黑树，它由 `root` 和 `header` 两个 TreeNode 构成，如下所示:
+
+```typescript
+abstract class TreeBaseContainer<K, V> extends Base {
+    ...
+    protected root: TreeNode<K, V> = new TreeNode<K, V>();
+    protected header: TreeNode<K, V> = new TreeNode<K, V>();
+    ...
+}
+```
+
+其中 `root` 表示树的根节点，`header` 和 `root` 互为各自的父节点，并且 `header` 的左子节点指向这棵树的最左子节点，右节点指向这棵树的最右子节点
+
+这样定义的好处是我们可以在查找或遍历时快速且有序的进行，比如在**迭代器**访问时，我们会从 `header.leftChild` 开始遍历到 `header.rightChild`
+
+并且它还支持传入自定义比较函数，比如这样:
+
+```typescript
+// 那么 header.leftChild 会指向 3，header.rightChild 会指向 1
+const st = new OrderedSet<number>([1, 2, 3], (x, y) => y - x);
+```
+
+`OrderedSet` 和 `OrderedMap` 都是自动对 `key` 排序的，`OrderedSet` 内的 `value` 值固定为 `undefined`
