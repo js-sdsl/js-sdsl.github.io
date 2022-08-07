@@ -1,3 +1,4 @@
+- [**README**](/zh-cn/README.md "Js-sdsl README")
 - **基础**
   - [介绍](/zh-cn/start/introduction.md)
   - [抽象父类 Base](/zh-cn/start/base.md)
@@ -23,3 +24,4 @@
   - [和其他库的对比](/zh-cn/test/compare2other.md)
 
 - **更多**
+  - [加入我们](/zh-cn/more/join-us.md)

@@ -21,6 +21,8 @@ for (const u of v) {
 
 由于 Js 中没有指针相关的概念，Js-sdsl 通过在迭代器上添加 `pointer` 属性来模拟 `*` 运算，添加 `next` 和 `pre` 函数来模拟 `++` 和 `--` 操作
 
+**注意，pre 和 next 会改变该对象内原有的指针位置，就像 C++ 中 `++it` 一样，it 本身也会被改变**
+
 ```javascript
 const v = new Vector([1, 2, 3]);
 const it = v.begin();

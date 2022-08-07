@@ -12,4 +12,4 @@
 - Implemented C++ STL bidirectional iterator
 
 [GitHub](https://github.com/zly201/js-sdsl/)
-[Get Started](#Js-sdsl)
+[Get Started](/README.md)

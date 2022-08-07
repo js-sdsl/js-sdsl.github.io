@@ -17,40 +17,41 @@
     name="keywords" 
     content="javascript,typescript,data-structure,library,set,map,ordered set,ordered map,red black tree,link list,iterator,c++,stl" 
   />
-  <link rel="icon" href="/assets/logo-removebg.png" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css" />
   <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <script defer src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
   <style>
+    h3 {
+      word-break: break-all;
+    }
     body, .sidebar ul li a {
       font-size: 1rem;
     }
-
     body.sticky .sidebar, body.sticky .sidebar-toggle {
       margin: unset;
     }
-
     .cover-main {
       font-size: 1.2rem;
     }
-
     .markdown-section {
       max-width: 800px;
       margin: 0;
       margin-left: 300px;
     }
-
     @media screen and (max-width: 1700px) {
       .markdown-section {
-          margin: 0 auto;
-          padding-left: 50px;
-          padding-right: 50px;
+        margin: 0 auto;
+        padding-left: 50px;
+        padding-right: 50px;
       }
     }
-
     @media screen and (max-width: 768px) {
+      body.close .app-nav, body.close .github-corner {
+        display: unset;
+        transform: translateX(100%);
+      }
       body.close .sidebar {
         width: 100%;
       }
@@ -69,10 +70,12 @@
       maxLevel: 4,
       subMaxLevel: 2,
       auto2top: true,
+      onlyCover: true,
       loadNavbar: true,
       autoHeader: true,
       mergeNavbar: true,
       loadSidebar: true,
+      logo: '/assets/logo-small.png',
       coverpage: ['/zh-cn/', '/'],
       count:{
         countable: true,

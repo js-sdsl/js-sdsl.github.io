@@ -12,4 +12,4 @@
 - 实现了 C++ STL 双向跌迭代器
 
 [GitHub](https://github.com/zly201/js-sdsl/)
-[Get Started](#Js-sdsl)
+[Get Started](/zh-cn/README.md)
