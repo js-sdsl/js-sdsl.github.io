@@ -24,4 +24,5 @@
   - [和其他库的对比](/zh-cn/test/compare2other.md)
 
 - **更多**
+  - [API 文档](/zh-cn/more/api-document.md)
   - [加入我们](/zh-cn/more/join-us.md)

@@ -1,6 +1,6 @@
-Js-sdsl 对大多数关键的函数进行了性能测试，以下是最新的测试结果
+Js-sdsl has performed performance tests on most of the key functions, the following are the latest test results.
 
-同样你可以在仓库中找到性能测试的[源文件](https://github.com/ZLY201/js-sdsl/tree/main/__performance__)和[结果文件](https://github.com/ZLY201/js-sdsl/blob/main/testResult.txt)
+Also you can find the [source file](https://github.com/ZLY201/js-sdsl/tree/main/__performance__) and [result file](https://github.com/ZLY201/js-sdsl/blob/main/testResult.txt) of the performance tests in the repository.
 
 ```bash
 =================================== Report ===================================

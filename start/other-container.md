@@ -1,8 +1,10 @@
-在上述容器外，Js-sdsl 同样提供栈、队列和优先队列三种适配器
+
+
+In addition to the above containers, Js-sdsl also provides three adapters: stack, queue and priority queue.
 
 ## Stack
 
-栈，后进先出结构
+Last in first out structure.
 
 ```javascript
 const s = new Stack([1, 2, 3]);
@@ -13,7 +15,7 @@ const t = s.top();          // O(1)
 
 ## Queue
 
-队列，先进先出结构
+First in first out structure.
 
 ```javascript
 const q = new Queue([1, 2, 3]);
@@ -24,7 +26,7 @@ const f = q.front();        // O(1)
 
 ## PriorityQueue
 
-优先队列，堆实现，一个保证最大元素总在队列最前面的队列，支持自定义比较函数
+Priority queue, heap implementation, a queue that guarantees that the largest element is always at the front of the queue, supports custom comparison functions.
 
 ```javascript
 const que = new PriorityQueue([1, 2, 3]);
@@ -32,6 +34,6 @@ que.push(4);                // O(logn)
 que.pop();                  // O(logn)
 const t = q.top();          // O(1)
 
-// 自定义比较函数
+// custom comparison function
 new PriorityQueue([1, 2, 3], (x, y) => x - y);
 ```

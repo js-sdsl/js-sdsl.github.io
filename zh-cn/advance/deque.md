@@ -21,7 +21,6 @@ class Deque {
 
 Deque 还具有两个常数: `sigma` 和 `initBucketSize`，前者代表 Deque 的扩容系数，即当内部空间不够时会扩充到当前元素个数的 `sigma` 倍，后者代表 Deque bucketSize 的默认值，它们的默认值是 `3` 和 `1024`，你可以在初始化时传入参数来修改 `initBucketSize`
 
-
 遍历 Deque 时，会从 `map[first][curFirst]` 开始，一直到 `map[last][curLast]` 结束，当访问索引时，我们根据区块大小以及首尾指针来获取当前元素所在位置
 
 **注意，Deque 在初始化时和其他容器有些区别，传入的初始化 `container` 必须包含 `size()` `size` 或 `length` 中的一种以获取初始化大小**

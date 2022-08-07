@@ -1,12 +1,12 @@
-Js-sdsl 为所有可迭代容器重载了 `[Symbol.iterator]` 函数，用于 `for...of` 语法
+Js-sdsl overloads the `[Symbol.iterator]` function for all iterable containers for the `for...of` syntax.
 
-除此之外，我们为顺序容器和树容器提供了类似 C++ STL 的双向迭代器
+In addition to this, we provide C++ STL-like bidirectional iterators for sequential containers and tree containers.
 
 ## Symbol.iterator
 
-[MDN 上关于迭代器的解释](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
+[Explanation of iterators on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
 
-以 Vector 为例
+Take Vector as an example:
 
 ```javascript
 const v = new Vector([1, 2, 3]);
@@ -17,9 +17,11 @@ for (const u of v) {
 
 ## Bidirectional Iterator
 
-和 C++ 一样，我们提供正向 (normal) / 反向 (reverse) 两种迭代器模式，同时为支持迭代器的容器提供了 `begin`，`end`，`rBegin`，`rEnd` 四个函数
+Like C++, we provide forward (normal) / reverse (reverse) iterator modes, and provide four functions `begin`, `end`, `rBegin`, `rEnd` for containers that support iterators.
 
-由于 Js 中没有指针相关的概念，Js-sdsl 通过在迭代器上添加 `pointer` 属性来模拟 `*` 运算，添加 `next` 和 `pre` 函数来模拟 `++` 和 `--` 操作
+Since there is no concept of pointers in Js, Js-sdsl simulates `*` operations by adding `pointer` attributes to iterators, and `next` and `pre` functions to simulate `++` and `--` operations.
+
+**Note that pre and next will change the original pointer position in the object, just like `++it` in C++, it itself will also be changed.**
 
 ```javascript
 const v = new Vector([1, 2, 3]);
@@ -48,4 +50,4 @@ it = it.pre();
 console.log(it.pointer);        // 3
 ```
 
-**注意，和 C++ 一样，如果你删除了迭代器所指向的元素，那么迭代器会失效，这是一个危险的操作**
+**Note, as in C++, if you delete the element pointed to by the iterator, the iterator will be invalidated, which is a dangerous operation.**

@@ -1,21 +1,21 @@
-哈希容器，又称无序关联式容器，此类容器存储的也是键值对元素；不同之处在于，关联式容器默认情况下会对存储的元素做升序排序，而无序关联式容器不会
+Hash containers, also known as unordered associative containers, also store key-value pair elements; the difference is that by default, associative containers sort the stored elements in ascending order, while unordered associative containers do not. meeting.
 
 ## HashSet
 
-无序集合，存储的所有元素不可以相同，支持自定义哈希函数
+Unordered collection, all stored elements cannot be the same, support custom hash function.
 
 ```javascript
 const st = new HashSet([1, 2, 3]);
 st.insert(4);               // O(1) ~ O(n)
 st.eraseElementByKey(4)     // O(1) ~ O(n)
 
-// 自定义哈希函数
+// custom hash function
 new HashSet([1, 2, 3], x => Number(x));
 ```
 
 ## HashMap
 
-无序键值对映射集合，自动对 key 哈希，存储的所有元素的 key 不可以相同，支持自定义哈希函数
+Unordered key-value pair mapping set, automatically hash the key, the keys of all stored elements cannot be the same, support custom hash function.
 
 ```javascript
 const mp = new HashMap(
@@ -24,7 +24,7 @@ const mp = new HashMap(
 mp.setElement(1, 2);        // O(1) ~ O(n)
 st.eraseElementByKey(1)     // O(1) ~ O(n)
 
-// 自定义哈希函数
+// custom hash function
 const mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])，
     x => Number(x)

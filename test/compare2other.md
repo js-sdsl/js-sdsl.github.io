@@ -1,1 +1,1 @@
-此部分将会在下一版本补充
+This part will be added in the next version.

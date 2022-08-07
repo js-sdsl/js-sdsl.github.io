@@ -1,12 +1,12 @@
 ## LinkNode
 
-LinkNode 是内置的链表指针，是双向的，包含 `pre`，`next` 和 `value` 三种属性，分别表示前置指针，后一指针和存储的元素
+LinkNode is a built-in linked list pointer, which is bidirectional and contains three attributes: `pre`, `next` and `value`, which represent the preceding pointer, the next pointer and the stored element respectively.
 
 ## LinkList
 
-LinkList 继承于抽象类 `SequentialContainer`，其本质上是一个循环链表，内部封装了 `header`，`head` 和 `tail` 三个 LinkNode，其中 `header` 是容器的超尾指针
+LinkList inherits from the abstract class `SequentialContainer`, which is essentially a circular linked list, which encapsulates three LinkNodes, `header`, `head` and `tail`, where `header` is the super tail pointer of the container.
 
-当期初始化时，内部指针指向如下:
+When the current period is initialized, the internal pointer points to the following:
 
 ```tex
 null \leftarrow head \rightarrow null \\
@@ -16,15 +16,15 @@ null \leftarrow tail \rightarrow null \\
 null \leftarrow header \rightarrow null \\
 ```
 
-如果这时去请求 LinkList 的迭代器，则会返回超尾元素 `header`
+If you request the iterator of LinkList at this time, it will return the super tail element `header`.
 
-当插入一个元素后，`head` 和 `tail` 会指向同一元素
+When an element is inserted, `head` and `tail` point to the same element.
 
 ```tex
 header \leftrightarrows head(tail) \leftrightarrows header
 ```
 
-当链表中元素个数大于 2 的时候，`head` 和 `tail` 才会分开
+When the number of elements in the linked list is greater than 2, `head` and `tail` will be separated.
 
 ```tex
 header \leftrightarrows head \leftrightarrows otherNode \leftrightarrows tail \leftrightarrows header
