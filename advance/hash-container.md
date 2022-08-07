@@ -32,7 +32,7 @@ The function of `bucketNum` is to record the number of current hash table bucket
 
 The function of `hashTable` is to record the first address of each **hash index**, for example, when inserting the value `x`, we will calculate `hashX` according to `hashFunc`, and then put this `hashX & (bucketNum - 1)` The value of `x` is inserted as the index of `x` in `hashTable`, which ensures that the `hashTable` storage limit (bucketNum) will never be exceeded when inserting.
 
-## 一些常量优化
+## Constant
 
 When the number at a single hash index is greater or less than a certain value, we will **tree/linked list**, this value is defined internally, of course, if you have special requirements, you can use `@ts -ignore` to make changes.
 
