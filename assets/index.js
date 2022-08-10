@@ -1,17 +1,6 @@
 (function (window) {
-    const minWidth = 400;
-    const width = window.screen.width;
-    if (width <= minWidth) {
-      const zoom = width / minWidth;
-      const style = document.createElement('style');
-      style.innerHTML =
-      `section.cover > * {
-        zoom: ${zoom};
-      }`
-      document.head.appendChild(style);
-    }
-
-    window.$docsify = {
+  function getDocsifyConfig() {
+    return {
       el: '#root',
       name: 'Js-sdsl',
       nameLink: {
@@ -21,15 +10,13 @@
       maxLevel: 4,
       subMaxLevel: 2,
       auto2top: true,
-      onlyCover: true,
       loadNavbar: true,
       autoHeader: true,
       mergeNavbar: true,
       loadSidebar: true,
-      fallbackLanguages: ['zh-cn'],
-      logo: '/assets/logo-small.png',
       coverpage: ['/zh-cn/', '/'],
-      count:{
+      logo: '/assets/logo-small.png',
+      count: {
         countable: true,
         fontsize: '1em',
         color: 'rgb(90, 90, 90)'
@@ -50,7 +37,7 @@
         EditOnGithubPlugin.create(
           '//github.com/js-sdsl/js-sdsl.github.io/blob/main/',
           null,
-          function(file) {
+          function (file) {
             if (file.indexOf('zh-cn') >= 0) {
               return '在 github 上编辑此页';
             } else {
@@ -75,7 +62,7 @@
       },
       markdown: {
         renderer: {
-          code: function(code, lang) {
+          code: function (code, lang) {
             if (lang === 'tex') {
               return `<span class='tex'>
                         ${katex.renderToString(code)}
@@ -87,4 +74,38 @@
       },
       repo: '//github.com/zly201/js-sdsl'
     }
+  }
+  function changeSectionSize() {
+    const minWidth = 400;
+    const width = window.screen.width;
+    if (width <= minWidth) {
+      const zoom = width / minWidth;
+      const style = document.createElement('style');
+      style.innerHTML =
+        `section.cover > * {
+          zoom: ${zoom};
+        }`;
+      document.head.appendChild(style);
+    }
+  }
+  function onUrlHashChange() {
+    const urlHash = window.location.hash;
+    const coverpages = window.$docsify.coverpage;
+    const mathResult = coverpages.some(
+      page => urlHash === `#${page}`
+    );
+    const mainStyle = document.getElementById('main-style');
+    if (mathResult) {
+      mainStyle.innerHTML =
+        `body > main {
+          display: none;
+        }`;
+    } else {
+      mainStyle.innerHTML = '';
+    }
+  }
+  changeSectionSize();
+  window.$docsify = getDocsifyConfig();
+  onUrlHashChange();
+  window.onhashchange = onUrlHashChange;
 })(window);

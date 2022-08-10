@@ -1,74 +1,74 @@
 div#root {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
 }
 
 h3 {
-    word-break: break-all;
+  word-break: break-all;
 }
 
 body,
 .sidebar ul li a {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 body.sticky .sidebar,
 body.sticky .sidebar-toggle {
-    margin: unset;
+  margin: unset;
 }
 
 .cover-main {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .cover-main>p:first-of-type {
-    margin: 0;
+  margin: 0;
 }
 
 .cover-main>blockquote {
-    margin: 0;
+  margin: 0;
 }
 
 .cover-main>blockquote>p {
-    margin: 0;
-    margin-top: 10px;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .cover-main>p>img {
-    width: 120px;
+  width: 120px;
 }
 
 section.cover .cover-main {
-    margin: 0;
+  margin: 0;
 }
 
 .markdown-section {
-    max-width: 800px;
-    margin: 0;
-    margin-left: 300px;
+  max-width: 800px;
+  margin: 0;
+  margin-left: 300px;
 }
 
 @media screen and (max-width: 1700px) {
-    .markdown-section {
-        margin: 0 auto;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
+  .markdown-section {
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
 
-    body.close .app-nav,
-    body.close .github-corner {
-        display: unset;
-        transform: translateX(100%);
-    }
+  body.close .app-nav,
+  body.close .github-corner {
+    display: unset;
+    transform: translateX(100%);
+  }
 
-    body.close .sidebar {
-        width: 100%;
-    }
+  body.close .sidebar {
+    width: 100%;
+  }
 }
