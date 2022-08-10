@@ -24,7 +24,7 @@ class Deque {
 }
 ```
 
-<p align="center"><img src="/zh-cn/assets/deque.png" alt="deque 内存分布图"></p>
+<p align='center'><img src='/zh-cn/assets/deque.png' alt='deque 内存分布图'></p>
 
 Deque also has two constants: `sigma` and `initBucketSize`, the former represents the expansion coefficient of Deque, that is, when the internal space is not enough, it will expand to `sigma` times the current number of elements, the latter represents the default value of Deque bucketSize, Their default values are `3` and `1024`, you can change `initBucketSize` by passing parameters during initialization.
 

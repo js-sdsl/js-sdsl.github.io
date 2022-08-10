@@ -22,4 +22,4 @@ Js-sdsl 官方文档仍在完善中，目前只支持中文和 English，但我�
 
 如果您愿意，请随时 fork [这个仓库](https://github.com/js-sdsl/js-sdsl.github.io)，然后开始翻译，只要你取得了进展，就请在主仓库开一个 issue 或者 pull request，我们将号召更多的贡献者来进行帮助
 
-如果对本文档或项目有任何问题，请联系 <a href="mailto:zilongyao1366@gmail.com">zilongyao1366@gmail.com</a>
+如果对本文档或项目有任何问题，请联系 <a href='mailto:zilongyao1366@gmail.com'>zilongyao1366@gmail.com</a>

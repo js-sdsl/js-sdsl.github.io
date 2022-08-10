@@ -22,4 +22,4 @@ The current documentation is written using the [docsify](https://docsify.js.org/
 
 If you want, feel free to fork [this repository](https://github.com/js-sdsl/js-sdsl.github.io) and start translating, as long as you make progress, please open an issue or pull request in the main repository, we will call on more contributors to help.
 
-If you have any questions about this document or project, please contact <a href="mailto:zilongyao1366@gmail.com">zilongyao1366@gmail.com</a>.
+If you have any questions about this document or project, please contact <a href='mailto:zilongyao1366@gmail.com'>zilongyao1366@gmail.com</a>.

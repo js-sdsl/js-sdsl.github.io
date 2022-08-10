@@ -2,14 +2,14 @@
 
 > 一款参考 C++ STL 实现的 JavaScript 标准数据结构库
 
-<a target="_blank" href="https://www.npmjs.com/package/js-sdsl"><img src="https://img.shields.io/npm/v/js-sdsl?color=blue" alt="version" /></a>
-<a target="_blank" href="https://github.com/zly201/js-sdsl/actions"><img src="https://github.com/zly201/js-sdsl/workflows/js-sdsl%20CI/badge.svg?branch=dev" alt="action status" /></a>
-<a target="_blank" href="https://coveralls.io/github/ZLY201/js-sdsl"><img src="https://coveralls.io/repos/github/ZLY201/js-sdsl/badge.svg?branch=dev" alt="coverage status" /></a>
-<a target="_blank" href="https://github.com/ZLY201/js-sdsl"><img src="https://img.shields.io/github/stars/zly201/js-sdsl.svg" alt="stars" /></a>
-<a target="_blank" href="https://www.npmjs.com/package/js-sdsl"><img src="https://img.shields.io/npm/dm/js-sdsl" alt="downloads" /></a>
-<a target="_blank" href="https://openbase.com/js/js-sdsl?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge"><img src="https://badges.openbase.com/js/rating/js-sdsl.svg?token=fh3LMNOV+JSWykSjtg1rA8kouSYkJoIDzGbvaByq5X0=" alt="rate this package"/></a>
-<a target="_blank" href="https://github.com/ZLY201/js-sdsl/blob/dev/LICENSE"><img src="https://img.shields.io/npm/l/js-sdsl?color=%230969da" alt="license" /></a>
-<a target="_blank" href="https://coveralls.io/github/ZLY201/js-sdsl"><img src="https://img.shields.io/github/languages/top/zly201/js-sdsl.svg?branch=dev" alt="top language" /></a>
+<a target='_blank' href='https://www.npmjs.com/package/js-sdsl'><img src='https://img.shields.io/npm/v/js-sdsl?color=blue' alt='version' /></a>
+<a target='_blank' href='https://github.com/zly201/js-sdsl/actions'><img src='https://github.com/zly201/js-sdsl/workflows/js-sdsl%20CI/badge.svg?branch=dev' alt='action status' /></a>
+<a target='_blank' href='https://coveralls.io/github/ZLY201/js-sdsl'><img src='https://coveralls.io/repos/github/ZLY201/js-sdsl/badge.svg?branch=dev' alt='coverage status' /></a>
+<a target='_blank' href='https://github.com/ZLY201/js-sdsl'><img src='https://img.shields.io/github/stars/zly201/js-sdsl.svg' alt='stars' /></a>
+<a target='_blank' href='https://www.npmjs.com/package/js-sdsl'><img src='https://img.shields.io/npm/dm/js-sdsl' alt='downloads' /></a>
+<a target='_blank' href='https://openbase.com/js/js-sdsl?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge'><img src='https://badges.openbase.com/js/rating/js-sdsl.svg?token=fh3LMNOV+JSWykSjtg1rA8kouSYkJoIDzGbvaByq5X0=' alt='rate this package'/></a>
+<a target='_blank' href='https://github.com/ZLY201/js-sdsl/blob/dev/LICENSE'><img src='https://img.shields.io/npm/l/js-sdsl?color=%230969da' alt='license' /></a>
+<a target='_blank' href='https://coveralls.io/github/ZLY201/js-sdsl'><img src='https://img.shields.io/github/languages/top/zly201/js-sdsl.svg?branch=dev' alt='top language' /></a>
 
 ## 包含的数据结构
 
@@ -50,7 +50,7 @@ npm install js-sdsl
 ### 在浏览器中使用
 
 ```html
-<script src="https://zly201.github.io/js-sdsl/js-sdsl.min.js" />
+<script src='https://zly201.github.io/js-sdsl/js-sdsl.min.js' />
 <script>
     const { 
       Vector,
@@ -147,7 +147,7 @@ console.log(myOrderedMap.getElementByKey(1)); // 2
 
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/takatoshi-kondo-02a91410/"><img src="https://avatars.githubusercontent.com/u/275959?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Takatoshi Kondo</b></sub></a><br /><a href="https://github.com/ZLY201/js-sdsl/commits?author=redboltz" title="Code">💻</a> <a href="https://github.com/ZLY201/js-sdsl/commits?author=redboltz" title="Tests">⚠️</a></td>
+    <td align='center'><a href='https://www.linkedin.com/in/takatoshi-kondo-02a91410/'><img src='https://avatars.githubusercontent.com/u/275959?v=4?s=100' width='100px;' alt=''/><br /><sub><b>Takatoshi Kondo</b></sub></a><br /><a href='https://github.com/ZLY201/js-sdsl/commits?author=redboltz' title='Code'>💻</a> <a href='https://github.com/ZLY201/js-sdsl/commits?author=redboltz' title='Tests'>⚠️</a></td>
   </tr>
 </table>
 

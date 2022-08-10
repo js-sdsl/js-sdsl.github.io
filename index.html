@@ -1,149 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
+  <meta charset='UTF-8'>
   <title>Js-sdsl document</title>
-  <meta name="robots" content="index,follow" />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="msvalidate.01" content="F4B80B07D19A12EA9D4ED6C3E9D67B8B" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-  <meta name="google-site-verification" content="_2ddvMPfgtCA1PLfZavyEajh7sYFfDwCYGbVQFeErgY" />
+  <meta name='robots' content='index,follow' />
+  <link rel='icon' href='/assets/favicon.ico' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+  <meta name='msvalidate.01' content='F4B80B07D19A12EA9D4ED6C3E9D67B8B' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0' />
+  <meta name='google-site-verification' content='_2ddvMPfgtCA1PLfZavyEajh7sYFfDwCYGbVQFeErgY' />
   <meta
-    name="description" 
-    content="Js-sdsl-A javascript standard data structure library which benchmark against C++ STL" 
+    name='description' 
+    content='Js-sdsl-A javascript standard data structure library which benchmark against C++ STL' 
   />
   <meta
-    name="keywords" 
-    content="javascript,typescript,data-structure,library,set,map,ordered set,ordered map,red black tree,link list,iterator,c++,stl" 
+    name='keywords' 
+    content='javascript,typescript,data-structure,library,set,map,ordered set,ordered map,red black tree,link list,iterator,c++,stl' 
   />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.min.css" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css" />
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
-  <script defer src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
-  <style>
-    h3 {
-      word-break: break-all;
-    }
-    body, .sidebar ul li a {
-      font-size: 1rem;
-    }
-    body.sticky .sidebar, body.sticky .sidebar-toggle {
-      margin: unset;
-    }
-    .cover-main {
-      font-size: 1.2rem;
-    }
-    .cover-main > p > img {
-      width: 120px;
-    }
-    .markdown-section {
-      max-width: 800px;
-      margin: 0;
-      margin-left: 300px;
-    }
-    @media screen and (max-width: 1700px) {
-      .markdown-section {
-        margin: 0 auto;
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      body.close .app-nav, body.close .github-corner {
-        display: unset;
-        transform: translateX(100%);
-      }
-      body.close .sidebar {
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel='stylesheet' href='/assets/index.css' />
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/katex/dist/katex.min.css' />
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.min.css' />
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css' />
+  <script src='//cdn.jsdelivr.net/npm/docsify-edit-on-github'></script>
+  <script defer src='//cdn.jsdelivr.net/npm/katex/dist/katex.min.js'></script>
+  <script src='/assets/index.js'></script>
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'Js-sdsl',
-      nameLink: {
-        '/zh-cn/': '/#/zh-cn/',
-        '/': '/',
-      },
-      maxLevel: 4,
-      subMaxLevel: 2,
-      auto2top: true,
-      onlyCover: true,
-      loadNavbar: true,
-      autoHeader: true,
-      mergeNavbar: true,
-      loadSidebar: true,
-      logo: '/assets/logo-small.png',
-      coverpage: ['/zh-cn/', '/'],
-      count:{
-        countable: true,
-        fontsize: '1em',
-        color: 'rgb(90, 90, 90)'
-      },
-      pagination: {
-        previousText: {
-          '/zh-cn/': '上一章节',
-          '/': 'Pre',
-        },
-        nextText: {
-          '/zh-cn/': '下一章节',
-          '/': 'Next',
-        },
-        crossChapter: true,
-        crossChapterText: true,
-      },
-      plugins: [
-        EditOnGithubPlugin.create(
-          '//github.com/js-sdsl/js-sdsl.github.io/blob/main/',
-          null,
-          function(file) {
-            if (file.indexOf('zh-cn') >= 0) {
-              return '在 github 上编辑此页';
-            } else {
-              return 'Edit on github';
-            }
-          })
-      ],
-      search: {
-        maxAge: 24 * 60 * 60,
-        paths: 'auto',
-        placeholder: {
-          '/zh-cn/': '搜索',
-          '/': 'Type to search',
-        },
-        noData: {
-          '/zh-cn/': '找不到结果',
-          '/': 'No Results',
-        },
-        depth: 3,
-        pathNamespaces: ['/zh-cn', '/'],
-        hideOtherSidebarContent: false
-      },
-      markdown: {
-        renderer: {
-          code: function(code, lang) {
-            if (lang === "tex") {
-              return `<span class="tex">
-                        ${katex.renderToString(code)}
-                      </span>`;
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        }
-      },
-      repo: '//github.com/zly201/js-sdsl'
-    }
-  </script>
-  <script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+  <div id='root'></div>
+  <script src='//unpkg.com/docsify-count/dist/countable.min.js'></script>
+  <script src='//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js'></script>
+  <script src='//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js'></script>
+  <script src='//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js'></script>
+  <script src='//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js'></script>
+  <script src='//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js'></script>
 </body>
 </html>

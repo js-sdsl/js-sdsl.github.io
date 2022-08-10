@@ -17,7 +17,7 @@ class Deque {
 }
 ```
 
-<p align="center"><img src="/zh-cn/assets/deque.png" alt="deque 内存分布图"></p>
+<p align='center'><img src='/zh-cn/assets/deque.png' alt='deque 内存分布图'></p>
 
 Deque 还具有两个常数: `sigma` 和 `initBucketSize`，前者代表 Deque 的扩容系数，即当内部空间不够时会扩充到当前元素个数的 `sigma` 倍，后者代表 Deque bucketSize 的默认值，它们的默认值是 `3` 和 `1024`，你可以在初始化时传入参数来修改 `initBucketSize`
 
