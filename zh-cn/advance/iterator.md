@@ -5,31 +5,37 @@ Js-sdsl 为顺序容器和树容器实现了类 C++ 的双向迭代器
 ContainerIterator 是所有迭代器的抽象父类，由于 Js 中没有指针的概念，我们在该类上添加了 `pointer` 属性来模拟 `*` 运算符，并且使用 `get/set` 来模拟指针的赋/取值
 
 ```typescript
-abstract class ContainerIterator<T, P> {
-    protected node: P;
+abstract class ContainerIterator<T> {
+    /**
+     * The node property is actually defined in the subclass.
+     * And type changes with the subclass.
+     */
+    protected node: any;
+    readonly iteratorType: 'normal' | 'reverse';
+    constructor(iteratorType: 'normal' | 'reverse') {
+        this.iteratorType = iteratorType;
+    }
     /**
      * Pointers to element.
      */
-    readonly iteratorType: 'normal' | 'reverse';
-    constructor(node: P, iteratorType: 'normal' | 'reverse') {
-        this.node = node;
-        this.iteratorType = iteratorType;
-    }
     abstract get pointer(): T;
+    /**
+     * Pointers to element.
+     */
     abstract set pointer(newValue: T);
     /**
      * @return Previous iterator.
      */
-    abstract pre(): ContainerIterator<T, P>;
+    abstract pre(): ContainerIterator<T>;
     /**
      * @return Next iterator.
      */
-    abstract next(): ContainerIterator<T, P>;
+    abstract next(): ContainerIterator<T>;
     /**
      * @param obj The other iterator you want to compare.
      * @return If this equals to obj.
      */
-    abstract equals(obj: ContainerIterator<T, P>): boolean;
+    abstract equals(obj: ContainerIterator<T>): boolean;
 }
 ```
 

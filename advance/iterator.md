@@ -5,31 +5,38 @@ Js-sdsl implements C++-like bidirectional iterators for sequential containers an
 ContainerIterator is the abstract parent class of all iterators. Since there is no concept of pointers in Js, we add the `pointer` attribute to this class to simulate the `*` operator, and use `get/set` to simulate the assignment of pointers / value.
 
 ```typescript
-abstract class ContainerIterator<T, P> {
-    protected node: P;
+abstract class ContainerIterator<T> {
     /**
-     * Pointers to element.
+     * The node property is actually defined in the subclass.
+     * And type changes with the subclass.
      */
+    protected node: any;
     readonly iteratorType: 'normal' | 'reverse';
     constructor(node: P, iteratorType: 'normal' | 'reverse') {
         this.node = node;
         this.iteratorType = iteratorType;
     }
+    /**
+     * Pointers to element.
+     */
     abstract get pointer(): T;
+    /**
+     * Pointers to element.
+     */
     abstract set pointer(newValue: T);
     /**
      * @return Previous iterator.
      */
-    abstract pre(): ContainerIterator<T, P>;
+    abstract pre(): ContainerIterator<T>;
     /**
      * @return Next iterator.
      */
-    abstract next(): ContainerIterator<T, P>;
+    abstract next(): ContainerIterator<T>;
     /**
      * @param obj The other iterator you want to compare.
      * @return If this equals to obj.
      */
-    abstract equals(obj: ContainerIterator<T, P>): boolean;
+    abstract equals(obj: ContainerIterator<T>): boolean;
 }
 ```
 

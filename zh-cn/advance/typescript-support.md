@@ -15,11 +15,11 @@ const mp = new OrderedMap<string, number>(
 
 ```typescript
 // 两种类型分别为容器元素类型和容器迭代器指针类型
-const arr: SequentialContainer<number, unknown>[] = [
+const arr: SequentialContainer<number>[] = [
     new Vector(), new LinkList(), new Deque()
 ];
 
-function doSomething(container: SequentialContainer<number, unknown>) {
+function doSomething(container: SequentialContainer<number>) {
     return container.size();
 }
 

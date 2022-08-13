@@ -3,7 +3,7 @@ Deque is a double-ended queue that can quickly interpolate at the head and tail,
 We adopted the idea of C++ when implementing Deque, using **multiple independent blocks** and an array that stores the **first address** of independent blocks to store elements, including the following variables:
 
 ```javascript
-class Deque {
+class Deque<T> {
     ...
     // The index of the block where the first element is located
     private first = 0;

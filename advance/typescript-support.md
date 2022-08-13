@@ -15,11 +15,11 @@ Or you can use the parent class to specify the type:
 
 ```typescript
 // The two types are the container element type and the container iterator pointer type
-const arr: SequentialContainer<number, unknown>[] = [
+const arr: SequentialContainer<number>[] = [
     new Vector(), new LinkList(), new Deque()
 ];
 
-function doSomething(container: SequentialContainer<number, unknown>) {
+function doSomething(container: SequentialContainer<number>) {
     return container.size();
 }
 

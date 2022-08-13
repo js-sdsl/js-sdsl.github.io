@@ -2,8 +2,8 @@ Deque 是一种双端队列，可以快速的在头部和尾部进行插值操�
 
 我们在实现 Deque 时采用了 C++ 的思想，使用**多个独立区块**和一个存储独立区块**首地址**的数组来存储元素，具体包含以下变量：
 
-```javascript
-class Deque {
+```typescript
+class Deque<T> {
     ...
     private first = 0;                  // 第一个元素所在区块的索引
     private curFirst = 0;               // 最后一个元素在当前区块内的索引
