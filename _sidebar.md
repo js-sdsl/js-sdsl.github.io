@@ -21,7 +21,7 @@
 - **About Test**
   - [Unit Test](/test/unit-test.md)
   - [Performance](/test/performance-test.md)
-  - [Compare2Other](/test/compare2other.md)
+  - [Benchmark](/test/benchmark)
 
 - **Extra Topics**
   - [Error Catch](/more/error-catch.md)

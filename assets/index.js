@@ -33,6 +33,10 @@
         crossChapter: true,
         crossChapterText: true,
       },
+      alias: {
+        '.*?/test/benchmark':
+          'https://raw.githubusercontent.com/js-sdsl/benchmark/main/README.md',
+      },
       plugins: [
         EditOnGithubPlugin.create(
           '//github.com/js-sdsl/js-sdsl.github.io/blob/main/',

@@ -2,14 +2,15 @@
 
 > 一款参考 C++ STL 实现的 JavaScript 标准数据结构库
 
-<a target='_blank' href='https://www.npmjs.com/package/js-sdsl'><img src='https://img.shields.io/npm/v/js-sdsl?color=blue' alt='version' /></a>
-<a target='_blank' href='https://github.com/zly201/js-sdsl/actions'><img src='https://github.com/zly201/js-sdsl/workflows/js-sdsl%20CI/badge.svg?branch=dev' alt='action status' /></a>
-<a target='_blank' href='https://coveralls.io/github/ZLY201/js-sdsl'><img src='https://coveralls.io/repos/github/ZLY201/js-sdsl/badge.svg?branch=dev' alt='coverage status' /></a>
-<a target='_blank' href='https://github.com/ZLY201/js-sdsl'><img src='https://img.shields.io/github/stars/zly201/js-sdsl.svg' alt='stars' /></a>
-<a target='_blank' href='https://www.npmjs.com/package/js-sdsl'><img src='https://img.shields.io/npm/dm/js-sdsl' alt='downloads' /></a>
-<a target='_blank' href='https://openbase.com/js/js-sdsl?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge'><img src='https://badges.openbase.com/js/rating/js-sdsl.svg?token=fh3LMNOV+JSWykSjtg1rA8kouSYkJoIDzGbvaByq5X0=' alt='rate this package'/></a>
-<a target='_blank' href='https://github.com/ZLY201/js-sdsl/blob/dev/LICENSE'><img src='https://img.shields.io/npm/l/js-sdsl?color=%230969da' alt='license' /></a>
-<a target='_blank' href='https://coveralls.io/github/ZLY201/js-sdsl'><img src='https://img.shields.io/github/languages/top/zly201/js-sdsl.svg?branch=dev' alt='top language' /></a>
+<a href="https://www.npmjs.com/package/js-sdsl"><img src="https://img.shields.io/npm/v/js-sdsl.svg" alt="NPM Version" /></a>
+<a href="https://github.com/ZLY201/js-sdsl/actions/workflows/build.yml"><img src="https://img.shields.io/github/workflow/status/ZLY201/js-sdsl/js-sdsl%20CI" alt="Build Status" /></a>
+<a href='https://coveralls.io/github/ZLY201/js-sdsl?branch=main'><img src='https://coveralls.io/repos/github/ZLY201/js-sdsl/badge.svg?branch=main' alt='Coverage Status' /></a>
+<a href="https://github.com/ZLY201/js-sdsl"><img src="https://img.shields.io/github/stars/ZLY201/js-sdsl.svg" alt="GITHUB Star" /></a>
+<a href="https://npmcharts.com/compare/js-sdsl?minimal=true"><img src="https://img.shields.io/npm/dm/js-sdsl.svg" alt="NPM Downloads" /></a>
+<a href="https://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js"><img src="https://img.badgesize.io/https://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js?compression=gzip&style=flat-square/" alt="Gzip Size"></a>
+<a href="https://openbase.com/js/js-sdsl?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge"><img src="https://badges.openbase.com/js/rating/js-sdsl.svg?token=fh3LMNOV+JSWykSjtg1rA8kouSYkJoIDzGbvaByq5X0=" alt="Rate this package"/></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/npm/l/js-sdsl.svg" alt="MIT-license" /></a>
+<a href="https://github.com/ZLY201/js-sdsl/"><img src="https://img.shields.io/github/languages/top/ZLY201/js-sdsl.svg" alt="GITHUB-language" /></a>
 
 ## 包含的数据结构
 
@@ -34,8 +35,8 @@
 
 使用 cdn 直接引入
 
-- [js-sdsl.js](https://zly201.github.io/js-sdsl/js-sdsl.js) (for development)
-- [js-sdsl.min.js](https://zly201.github.io/js-sdsl/js-sdsl.min.js) (for production)
+- [js-sdsl.js](https://unpkg.com/js-sdsl/dist/umd/js-sdsl.js) (for development)
+- [js-sdsl.min.js](https://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js) (for production)
 
 使用 npm 下载
 
@@ -50,7 +51,8 @@ npm install js-sdsl
 ### 在浏览器中使用
 
 ```html
-<script src='https://zly201.github.io/js-sdsl/js-sdsl.min.js' />
+<!-- you can download the file locally and import it or import it dynamically by using url. -->
+<script src="https://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js"></script>
 <script>
     const { 
       Vector,
@@ -103,29 +105,29 @@ console.log(myOrderedMap.getElementByKey(1)); // 2
 ┌─────────┬─────────────────────┬─────────┬───────────────┬─────────┐
 │ (index) │      testFunc       │ testNum │ containerSize │ runTime │
 ├─────────┼─────────────────────┼─────────┼───────────────┼─────────┤
-│    0    │    'constructor'    │    1    │    1000000    │  1969   │
-│    1    │      'insert'       │ 1000000 │    2000000    │   617   │
-│    2    │ 'eraseElementByKey' │ 1000000 │    3000000    │   496   │
-│    3    │ 'eraseElementByPos' │   10    │    3000000    │   603   │
-│    4    │       'union'       │    1    │    2999990    │  3531   │
-│    5    │    'lowerBound'     │ 1000000 │    2999990    │  1127   │
-│    6    │    'upperBound'     │ 1000000 │    2999990    │  1492   │
-│    7    │ 'reverseLowerBound' │ 1000000 │    2999990    │  1131   │
-│    8    │ 'reverseUpperBound' │ 1000000 │    2999990    │  1143   │
+│    0    │    'constructor'    │    1    │    1000000    │  1667   │
+│    1    │      'insert'       │ 1000000 │    2000000    │   558   │
+│    2    │ 'eraseElementByKey' │ 1000000 │    3000000    │   362   │
+│    3    │ 'eraseElementByPos' │   10    │    3000000    │   633   │
+│    4    │       'union'       │    1    │    2999998    │  1949   │
+│    5    │    'lowerBound'     │ 1000000 │    2999998    │  1665   │
+│    6    │    'upperBound'     │ 1000000 │    2999998    │  1722   │
+│    7    │ 'reverseLowerBound' │ 1000000 │    2999998    │  1690   │
+│    8    │ 'reverseUpperBound' │ 1000000 │    2999998    │  1713   │
 └─────────┴─────────────────────┴─────────┴───────────────┴─────────┘
 =================================== OrderedMap ===================================
 ┌─────────┬─────────────────────┬─────────┬───────────────┬─────────┐
 │ (index) │      testFunc       │ testNum │ containerSize │ runTime │
 ├─────────┼─────────────────────┼─────────┼───────────────┼─────────┤
-│    0    │    'constructor'    │    1    │    1000000    │  2259   │
-│    1    │    'setElement'     │ 1000000 │    2000000    │   875   │
-│    2    │ 'eraseElementByKey' │ 1000000 │    2000000    │   426   │
-│    3    │ 'eraseElementByPos' │   100   │    1000000    │  4722   │
-│    4    │       'union'       │    1    │    1999900    │  5106   │
-│    5    │    'lowerBound'     │ 1000000 │    1999900    │  1279   │
-│    6    │    'upperBound'     │ 1000000 │    1999900    │  1197   │
-│    7    │ 'reverseLowerBound' │ 1000000 │    1999900    │  1222   │
-│    8    │ 'reverseUpperBound' │ 1000000 │    1999900    │  1347   │
+│    0    │    'constructor'    │    1    │    1000000    │  1574   │
+│    1    │    'setElement'     │ 1000000 │    2000000    │   643   │
+│    2    │ 'eraseElementByKey' │ 1000000 │    2000000    │   344   │
+│    3    │ 'eraseElementByPos' │   100   │    1000000    │  6082   │
+│    4    │       'union'       │    1    │    1999900    │  1888   │
+│    5    │    'lowerBound'     │ 1000000 │    1999900    │  1615   │
+│    6    │    'upperBound'     │ 1000000 │    1999900    │  1666   │
+│    7    │ 'reverseLowerBound' │ 1000000 │    1999900    │  1619   │
+│    8    │ 'reverseUpperBound' │ 1000000 │    1999900    │  1665   │
 └─────────┴─────────────────────┴─────────┴───────────────┴─────────┘
 ```
 
@@ -147,7 +149,7 @@ console.log(myOrderedMap.getElementByKey(1)); // 2
 
 <table>
   <tr>
-    <td align='center'><a href='https://www.linkedin.com/in/takatoshi-kondo-02a91410/'><img src='https://avatars.githubusercontent.com/u/275959?v=4?s=100' width='100px;' alt=''/><br /><sub><b>Takatoshi Kondo</b></sub></a><br /><a href='https://github.com/ZLY201/js-sdsl/commits?author=redboltz' title='Code'>💻</a> <a href='https://github.com/ZLY201/js-sdsl/commits?author=redboltz' title='Tests'>⚠️</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/takatoshi-kondo-02a91410/"><img src="https://avatars.githubusercontent.com/u/275959?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Takatoshi Kondo</b></sub></a><br /><a href="https://github.com/ZLY201/js-sdsl/commits?author=redboltz" title="Code">💻</a> <a href="https://github.com/ZLY201/js-sdsl/commits?author=redboltz" title="Tests">⚠️</a></td>
   </tr>
 </table>
 

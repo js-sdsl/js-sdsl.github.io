@@ -1,6 +1,6 @@
 Js-sdsl has performed performance tests on most of the key functions, the following are the latest test results.
 
-Also you can find the [source file](https://github.com/ZLY201/js-sdsl/tree/main/__performance__) and [result file](https://github.com/ZLY201/js-sdsl/blob/main/testResult.txt) of the performance tests in the repository.
+Also you can find the [source file](https://github.com/ZLY201/js-sdsl/tree/main/performance) and [result file](https://github.com/ZLY201/js-sdsl/blob/main/testResult.txt) of the performance tests in the repository.
 
 ```bash
 =================================== Report ===================================

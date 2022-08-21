@@ -21,7 +21,7 @@
 - **关于测试**
   - [单元测试](/zh-cn/test/unit-test.md)
   - [性能测试](/zh-cn/test/performance-test.md)
-  - [和其他库的对比](/zh-cn/test/compare2other.md)
+  - [Benchmark](/zh-cn/test/benchmark)
 
 - **更多**
   - [错误捕获](/zh-cn/more/error-catch.md)
