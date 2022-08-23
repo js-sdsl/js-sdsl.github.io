@@ -35,7 +35,7 @@
       },
       alias: {
         '.*?/test/benchmark':
-          'https://raw.githubusercontent.com/js-sdsl/benchmark/main/README.md',
+          '//js-sdsl.github.io/benchmark/README.md',
       },
       plugins: [
         EditOnGithubPlugin.create(
