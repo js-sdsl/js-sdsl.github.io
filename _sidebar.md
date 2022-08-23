@@ -24,6 +24,5 @@
   - [Benchmark](/test/benchmark)
 
 - **Extra Topics**
-  - [Error Catch](/more/error-catch.md)
   - [API Document](/more/api-document.md)
   - [Join Us](/more/join-us.md)

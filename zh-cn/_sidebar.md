@@ -24,6 +24,5 @@
   - [Benchmark](/zh-cn/test/benchmark)
 
 - **更多**
-  - [错误捕获](/zh-cn/more/error-catch.md)
   - [API 文档](/zh-cn/more/api-document.md)
   - [加入我们](/zh-cn/more/join-us.md)
