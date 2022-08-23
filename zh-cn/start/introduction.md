@@ -25,9 +25,9 @@ Js-sdsl 是一款参考 C++ STL 实现的 JavaScript 标准数据结构库，用
 
 ```html
 <!-- 开发环境 -->
-<script src='https://zly201.github.io/js-sdsl/js-sdsl.js' />
+<script src='https://unpkg.com/js-sdsl/dist/umd/js-sdsl.js' />
 <!-- 发布环境 -->
-<script src='https://zly201.github.io/js-sdsl/js-sdsl.min.js' />
+<script src='hhttps://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js' />
 ```
 
 或者使用 npm

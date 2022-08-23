@@ -25,9 +25,9 @@ If you are using a browser, we provide cdn import:
 
 ```html
 <!-- development -->
-<script src='https://zly201.github.io/js-sdsl/js-sdsl.js' />
+<script src='https://unpkg.com/js-sdsl/dist/umd/js-sdsl.js' />
 <!-- production -->
-<script src='https://zly201.github.io/js-sdsl/js-sdsl.min.js' />
+<script src='https://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js' />
 ```
 
 or use npm:
