@@ -11,7 +11,7 @@ class Deque<T> {
     private curLast = 0;                // 最后一个元素在当前区块内的索引
     private bucketNum = 0;              // 当前含有元素的区块个数
     private bucketSize: number;         // 各个区块存储元素的最大个数
-    private map: (T[])[] = [];          // 区块首地址索引数组
+    private map: T[][] = [];          // 区块首地址索引数组
     constructor(container, bucketSize) { ... }
     ...
 }
@@ -19,8 +19,10 @@ class Deque<T> {
 
 <p align='center'><img src='/zh-cn/assets/deque.png' alt='deque 内存分布图'></p>
 
-Deque 还具有两个常数: `sigma` 和 `initBucketSize`，前者代表 Deque 的扩容系数，即当内部空间不够时会扩充到当前元素个数的 `sigma` 倍，后者代表 Deque bucketSize 的默认值，它们的默认值是 `3` 和 `1024`，你可以在初始化时传入参数来修改 `initBucketSize`
+Deque 中的内存时按需分配的，所以您不必担心内存浪费的问题
 
 遍历 Deque 时，会从 `map[first][curFirst]` 开始，一直到 `map[last][curLast]` 结束，当访问索引时，我们根据区块大小以及首尾指针来获取当前元素所在位置
+
+当 Deque 内部的空间不够时，会自动进行扩容，默认会扩容为当前内存空间的两倍，由于我们使用 `map` 存储了各个桶的首地址，所以在扩容时我们**不必再移动元素**，而是**移动指针**，这使得 Deque 在插入元素时达到了均摊为 `O(1)` 的时间复杂度，并且在 [Benchmark](/zh-cn/test/benchmark) 中发现比 [`denque`](https://github.com/invertase/denque) 更快！
 
 **注意，Deque 在初始化时和其他容器有些区别，传入的初始化 `container` 必须包含 `size()` `size` 或 `length` 中的一种以获取初始化大小**

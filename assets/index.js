@@ -34,8 +34,9 @@
         crossChapterText: true,
       },
       alias: {
-        '.*?/test/benchmark':
-          '//js-sdsl.github.io/benchmark/README.md',
+        '.*?/test/benchmark': '//js-sdsl.github.io/benchmark/README.md',
+        '.*?/zh-cn/README': '//zly201.github.io/js-sdsl/README.zh-CN.md',
+        '.*?/README': '//zly201.github.io/js-sdsl/README.md',
       },
       plugins: [
         EditOnGithubPlugin.create(

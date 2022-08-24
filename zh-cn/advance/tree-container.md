@@ -22,7 +22,7 @@ class TreeNode<K, V> {
 }
 ```
 
-并且拥有用于左旋、右旋和自移除的三个函数
+并且拥有用于左旋、右旋、自移除、获取中序遍历下一个节点、获取后续遍历下一个节点等函数
 
 ## TreeContainer
 
@@ -39,9 +39,9 @@ abstract class TreeBaseContainer<K, V> extends Base {
 
 其中 `root` 表示树的根节点，`header` 和 `root` 互为各自的父节点，并且 `header` 的左子节点指向这棵树的最左子节点，右节点指向这棵树的最右子节点
 
-这样定义的好处是我们可以在查找或遍历时快速且有序的进行，比如在**迭代器**访问时，我们会从 `header.leftChild` 开始遍历到 `header.rightChild`
+这样定义的好处是我们可以在查找或遍历时快速且有序的进行，比如在**迭代器**访问时，我们会从 `header.leftChild` 开始遍历到 `header.rightChild`，并且在插入时会判断插入值是否为极端值（最大或最小），这样我们可以快速的将其插入到树中以提高性能
 
-并且它还支持传入自定义比较函数，比如这样:
+它还支持传入自定义比较函数，比如这样:
 
 ```typescript
 // 那么 header.leftChild 会指向 3，header.rightChild 会指向 1

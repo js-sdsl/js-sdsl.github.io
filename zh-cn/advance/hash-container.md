@@ -4,7 +4,7 @@
 
 ## 内置 Hash 表
 
-HashContainer 的实现和 Deque 有些类似，都是使用多个不连续的独立区块来存储元素，只不过 Deque 中使用数组，而 HashContainer 中使用的是 `LinkList` 和 `TreeContainer`
+HashContainer 的实现和 Deque 有些类似，都是使用多个不连续的独立区块来存储元素，只不过 Deque 中使用数组，而 HashContainer 中使用的是 `Vector` 和 `TreeContainer`
 
 在初始化时，哈希表会提供一个 `hashTable` 和 `bucketNum`，以 `HashSet` 举例，它的类型是:
 
@@ -12,7 +12,7 @@ HashContainer 的实现和 Deque 有些类似，都是使用多个不连续的�
 class HashSet<K> {
     // 实际设计中这个属性出现在 HashContainerBase 内
     protected bucketNum: number;
-    private hashTable: (LinkList<K> | OrderedSet<K>)[] = [];
+    private hashTable: (Vector<K> | OrderedSet<K>)[] = [];
     ...
 }
 ```
@@ -23,7 +23,7 @@ class HashSet<K> {
 class HashMap<K, V> {
     // 实际设计中这个属性出现在 HashContainerBase 内
     protected bucketNum: number;
-    private hashTable: (LinkList<[K, V]> | OrderedMap<K, V>)[] = [];
+    private hashTable: (Vector<[K, V]> | OrderedMap<K, V>)[] = [];
     ...
 }
 ```

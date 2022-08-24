@@ -7,7 +7,7 @@ div#root {
   margin: 0 auto;
 }
 
-h3 {
+h3 > a {
   word-break: break-all;
 }
 

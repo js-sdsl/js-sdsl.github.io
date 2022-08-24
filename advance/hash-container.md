@@ -4,7 +4,7 @@ Although the `Set` and `Map` classes have been provided in ES6, Js-sdsl still pr
 
 ## HashTable
 
-The implementation of HashContainer is somewhat similar to Deque in that it uses multiple discrete independent blocks to store elements, but Deque uses arrays, while HashContainer uses `LinkList` and `TreeContainer`.
+The implementation of HashContainer is somewhat similar to Deque in that it uses multiple discrete independent blocks to store elements, but Deque uses arrays, while HashContainer uses `Vector` and `TreeContainer`.
 
 When initialized, the hash table will provide a `hashTable` and `bucketNum`, for example `HashSet`, its type is:
 
@@ -12,7 +12,7 @@ When initialized, the hash table will provide a `hashTable` and `bucketNum`, for
 class HashSet<K> {
     // In the actual design, this property appears in HashContainerBase
     protected bucketNum: number;
-    private hashTable: (LinkList<K> | OrderedSet<K>)[] = [];
+    private hashTable: (Vector<K> | OrderedSet<K>)[] = [];
     ...
 }
 ```
@@ -23,7 +23,7 @@ If it is a `HashMap`, then it will have one more `value`, like this:
 class HashMap<K, V> {
     // In the actual design, this property appears in HashContainerBase
     protected bucketNum: number;
-    private hashTable: (LinkList<[K, V]> | OrderedMap<K, V>)[] = [];
+    private hashTable: (Vector<[K, V]> | OrderedMap<K, V>)[] = [];
     ...
 }
 ```
