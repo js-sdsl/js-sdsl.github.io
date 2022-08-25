@@ -21,7 +21,8 @@
 - **关于测试**
   - [单元测试](/zh-cn/test/unit-test.md)
   - [性能测试](/zh-cn/test/performance-test.md)
-  - [Benchmark](/zh-cn/test/benchmark)
+  - [Benchmark 概览](/zh-cn/test/benchmark-analyze)
+  - [Benchmark 结果](/zh-cn/test/benchmark-result)
 
 - **更多**
   - [API 文档](/zh-cn/more/api-document.md)

@@ -21,7 +21,8 @@
 - **About Test**
   - [Unit Test](/test/unit-test.md)
   - [Performance](/test/performance-test.md)
-  - [Benchmark](/test/benchmark)
+  - [Benchmark Analyze](/test/benchmark-analyze)
+  - [Benchmark Result](/test/benchmark-result)
 
 - **Extra Topics**
   - [API Document](/more/api-document.md)
