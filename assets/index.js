@@ -35,6 +35,7 @@
       },
       alias: {
         '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
+        '.*?/test/performance-test': '//zly201.github.io/js-sdsl/performance.md',
         '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
         '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md',
         '.*?/zh-cn/README': '//zly201.github.io/js-sdsl/README.zh-CN.md',

@@ -7,6 +7,12 @@ div#root {
   margin: 0 auto;
 }
 
+.markdown-section table {
+  width: 100%;
+  display: table;
+  text-align: center;
+}
+
 h3 > a {
   word-break: break-all;
 }
