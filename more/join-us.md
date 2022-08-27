@@ -4,15 +4,15 @@ Now let's cover the preparations and what you can do.
 
 ## Code of Conduct
 
-[Code of Conduct](https://github.com/ZLY201/js-sdsl/blob/main/CODE_OF_CONDUCT.md) is a guide to create a good learning or discussion environment.
+[Code of Conduct](https://github.com/js-sdsl/js-sdsl/blob/main/CODE_OF_CONDUCT.md) is a guide to create a good learning or discussion environment.
 
 ## Help
 
-If you want to report bugs or make new requests, please submit an issue or pull request to [Github](https://github.com/ZLY201/js-sdsl).
+If you want to report bugs or make new requests, please submit an issue or pull request to [Github](https://github.com/js-sdsl/js-sdsl).
 
 ## Contribute Your Code
 
-Like other projects, you are welcome to contribute your code, but in order to help you quickly solve your problems or receive your PR, please be sure to read this [contribution guide](https://github.com/ZLY201/js-sdsl/blob/main/.github/CONTRIBUTING.md) first.
+Like other projects, you are welcome to contribute your code, but in order to help you quickly solve your problems or receive your PR, please be sure to read this [contribution guide](https://github.com/js-sdsl/js-sdsl/blob/main/.github/CONTRIBUTING.md) first.
 
 ## Translate Documents
 

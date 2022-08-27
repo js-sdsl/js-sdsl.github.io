@@ -35,11 +35,11 @@
       },
       alias: {
         '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
-        '.*?/test/performance-test': '//zly201.github.io/js-sdsl/performance.md',
+        '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
         '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
         '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md',
-        '.*?/zh-cn/README': '//zly201.github.io/js-sdsl/README.zh-CN.md',
-        '.*?/README': '//zly201.github.io/js-sdsl/README.md',
+        '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
+        '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
       },
       plugins: [
         EditOnGithubPlugin.create(
@@ -80,7 +80,7 @@
           }
         }
       },
-      repo: '//github.com/zly201/js-sdsl'
+      repo: '//github.com/js-sdsl/js-sdsl'
     }
   }
   function changeSectionSize() {

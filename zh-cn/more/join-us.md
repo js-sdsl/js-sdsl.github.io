@@ -4,15 +4,15 @@ Js-sdsl 仍在完善中，目前的版本是 4.x，我们预计在 5.x 或更高
 
 ## 行为规范
 
-这份[行为规范](https://github.com/ZLY201/js-sdsl/blob/main/CODE_OF_CONDUCT.md)是一个指南，旨在打造一个良好的学习或讨论环境
+这份[行为规范](https://github.com/js-sdsl/js-sdsl/blob/main/CODE_OF_CONDUCT.md)是一个指南，旨在打造一个良好的学习或讨论环境
 
 ## 获取帮助
 
-如果你想报告 bug 或提出新的需求，欢迎来 [Github](https://github.com/ZLY201/js-sdsl) 提交 issue 或 pull request
+如果你想报告 bug 或提出新的需求，欢迎来 [Github](https://github.com/js-sdsl/js-sdsl) 提交 issue 或 pull request
 
 ## 贡献代码
 
-和其它的项目一样，我们欢迎您贡献您的代码，但为了能帮助您快速的解决您的问题或接收您的 PR，请务必先阅读这份[贡献指南](https://github.com/ZLY201/js-sdsl/blob/main/.github/CONTRIBUTING.md)
+和其它的项目一样，我们欢迎您贡献您的代码，但为了能帮助您快速的解决您的问题或接收您的 PR，请务必先阅读这份[贡献指南](https://github.com/js-sdsl/js-sdsl/blob/main/.github/CONTRIBUTING.md)
 
 ## 翻译文档
 

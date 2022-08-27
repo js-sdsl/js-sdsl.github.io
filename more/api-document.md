@@ -1,1 +1,1 @@
-We generate complete [API documentation](https://zly201.github.io/js-sdsl) for all Js-sdsl developers or users, based on [typedoc](https://typedoc.org/ ) and follow the TypeScript annotation specification to generate.
+We generate complete [API documentation](https://js-sdsl.github.io/js-sdsl) for all Js-sdsl developers or users, based on [typedoc](https://typedoc.org/ ) and follow the TypeScript annotation specification to generate.

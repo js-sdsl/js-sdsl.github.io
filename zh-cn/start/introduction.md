@@ -41,7 +41,7 @@ npm i js-sdsl
 ### 在浏览器中使用
 
 ```html
-<script src='https://zly201.github.io/js-sdsl/js-sdsl.min.js' />
+<script src='https://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js' />
 <script>
     const { 
       Vector,
