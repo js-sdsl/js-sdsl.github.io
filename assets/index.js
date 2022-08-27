@@ -98,6 +98,17 @@
   }
   function onUrlHashChange() {
     const urlHash = window.location.hash;
+    const tableStyle = document.getElementById('table-style');
+    if (urlHash.includes('performance')) {
+      tableStyle.innerHTML =
+        `.markdown-section table {
+            display: table;
+            text-align: center;
+            table-layout: fixed;
+          }`;
+    } else {
+      tableStyle.innerHTML = '';
+    }
     const coverpages = window.$docsify.coverpage;
     const mathResult = coverpages.some(
       page => urlHash === `#${page}`

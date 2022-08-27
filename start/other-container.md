@@ -36,4 +36,10 @@ const t = q.top();          // O(1)
 
 // custom comparison function
 new PriorityQueue([1, 2, 3], (x, y) => x - y);
+
+/* 
+ * When the first parameter is an array, you can specify copy=false, 
+ * then will directly change the original array instead of using copy
+ */
+new PriorityQueue([1, 2, 3], undefined, false);
 ```

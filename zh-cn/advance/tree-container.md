@@ -10,15 +10,14 @@ Js-sdsl 中的树容器 OrderedSet 和 OrderedMap 继承于 `TreeContainer`，�
 
 ```typescript
 class TreeNode<K, V> {
-    ...
+    // ...
     color = true;                                       // 节点颜色 (red: true, black: false)
     key: K | undefined = undefined;                     // 节点 key 值
     value: V | undefined = undefined;                   // 节点 value 值
     parent: TreeNode<K, V> | undefined = undefined;     // 父亲节点
-    brother: TreeNode<K, V> | undefined = undefined;    // 兄弟节点 (二叉树中同级别的另一个节点)
     leftChild: TreeNode<K, V> | undefined = undefined;  // 左子节点
     rightChild: TreeNode<K, V> | undefined = undefined; // 右子节点
-    ...
+    // ...
 }
 ```
 
@@ -30,14 +29,16 @@ TreeContainer 是 `OrderedSet` 和 `OrderedMap` 的抽象父类，内置的是�
 
 ```typescript
 abstract class TreeBaseContainer<K, V> extends Base {
-    ...
-    protected root: TreeNode<K, V> = new TreeNode<K, V>();
+    // ...
+    protected root: TreeNode<K, V> | undefined;
     protected header: TreeNode<K, V> = new TreeNode<K, V>();
-    ...
+    // ...
 }
 ```
 
 其中 `root` 表示树的根节点，`header` 和 `root` 互为各自的父节点，并且 `header` 的左子节点指向这棵树的最左子节点，右节点指向这棵树的最右子节点
+
+当内部元素个数为 0 时 root 为 `undefined`
 
 这样定义的好处是我们可以在查找或遍历时快速且有序的进行，比如在**迭代器**访问时，我们会从 `header.leftChild` 开始遍历到 `header.rightChild`，并且在插入时会判断插入值是否为极端值（最大或最小），这样我们可以快速的将其插入到树中以提高性能
 

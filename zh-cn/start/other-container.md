@@ -34,4 +34,7 @@ const t = q.top();          // O(1)
 
 // 自定义比较函数
 new PriorityQueue([1, 2, 3], (x, y) => x - y);
+
+// 当第一个参数是数组时，可以指定 copy=false，即直接对原数组进行改变，而不是使用拷贝
+new PriorityQueue([1, 2, 3], undefined, false);
 ```

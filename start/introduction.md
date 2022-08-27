@@ -17,7 +17,7 @@ If you have some research on C++ STL libraries, then Js-sdsl is completely pedia
 
 Unlike other Js data structure libraries, Js-sdsl is completely self-contained. It is written in TypeScript, has strict type deduction, and is implemented with reference to OOP. All containers have a common ancestor.
 
-If you want to know more about the comparison of Js-sdsl with other mainstream libraries, please refer to [the comparison with other libraries](/test/compare2other.md).
+If you want to know more about the comparison of Js-sdsl with other mainstream libraries, please refer to [benchmark](/test/benchmark).
 
 ## Start
 
