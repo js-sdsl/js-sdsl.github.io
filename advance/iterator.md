@@ -6,37 +6,46 @@ ContainerIterator is the abstract parent class of all iterators. Since there is 
 
 ```typescript
 abstract class ContainerIterator<T> {
+    static readonly NORMAL = false;
+    static readonly REVERSE = true;
     /**
-     * The node property is actually defined in the subclass.
-     * And type changes with the subclass.
+     * @description Iterator's type.
      */
-    protected node: any;
-    readonly iteratorType: 'normal' | 'reverse';
-    constructor(node: P, iteratorType: 'normal' | 'reverse') {
-        this.node = node;
+    readonly iteratorType: boolean;
+    protected constructor(iteratorType: boolean = ContainerIterator.NORMAL) {
         this.iteratorType = iteratorType;
     }
     /**
-     * Pointers to element.
+     * @description Pointers to element.
+     * @return The value of the pointer's element.
      */
     abstract get pointer(): T;
     /**
-     * Pointers to element.
+     * @description Set pointer's value (some containers are unavailable).
+     * @param newValue The new value you want to set.
      */
     abstract set pointer(newValue: T);
     /**
-     * @return Previous iterator.
+     * @description Move `this` iterator to pre.
      */
-    abstract pre(): ContainerIterator<T>;
+    abstract pre(): this;
     /**
-     * @return Next iterator.
+     * @description Move `this` iterator to next.
      */
-    abstract next(): ContainerIterator<T>;
+    abstract next(): this;
     /**
      * @param obj The other iterator you want to compare.
-     * @return If this equals to obj.
+     * @return Boolean about if this equals to obj.
+     * @example container.find(1).equals(container.end());
      */
     abstract equals(obj: ContainerIterator<T>): boolean;
+    /**
+     * @description Get a copy of itself.<br/>
+     *              We do not guarantee the safety of this function.<br/>
+     *              Please ensure that the iterator will not fail.
+     * @return The copy of self.
+     */
+    abstract copy(): ContainerIterator<T>;
 }
 ```
 
@@ -45,6 +54,8 @@ Where `node` represents the actual stored `pointer` type, we further operate acc
 `pre` and `next` emulate `operator--` and `operator++` respectively, which change the iterator itself.
 
 `equals` simulates `operator==`, which is used to identify whether two iterators are equal (pointing to the same location), it is also judged according to `node`.
+
+Since `pre` and `next` change the iterator itself, but sometimes we still want to keep its value, the `copy` function returns a copy of itself to solve this problem.
 
 ## VectorIterator, DequeIterator
 

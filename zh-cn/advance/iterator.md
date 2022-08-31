@@ -6,36 +6,46 @@ ContainerIterator 是所有迭代器的抽象父类，由于 Js 中没有指针�
 
 ```typescript
 abstract class ContainerIterator<T> {
+    static readonly NORMAL = false;
+    static readonly REVERSE = true;
     /**
-     * The node property is actually defined in the subclass.
-     * And type changes with the subclass.
+     * @description Iterator's type.
      */
-    protected node: any;
-    readonly iteratorType: 'normal' | 'reverse';
-    constructor(iteratorType: 'normal' | 'reverse') {
+    readonly iteratorType: boolean;
+    protected constructor(iteratorType: boolean = ContainerIterator.NORMAL) {
         this.iteratorType = iteratorType;
     }
     /**
-     * Pointers to element.
+     * @description Pointers to element.
+     * @return The value of the pointer's element.
      */
     abstract get pointer(): T;
     /**
-     * Pointers to element.
+     * @description Set pointer's value (some containers are unavailable).
+     * @param newValue The new value you want to set.
      */
     abstract set pointer(newValue: T);
     /**
-     * @return Previous iterator.
+     * @description Move `this` iterator to pre.
      */
-    abstract pre(): ContainerIterator<T>;
+    abstract pre(): this;
     /**
-     * @return Next iterator.
+     * @description Move `this` iterator to next.
      */
-    abstract next(): ContainerIterator<T>;
+    abstract next(): this;
     /**
      * @param obj The other iterator you want to compare.
-     * @return If this equals to obj.
+     * @return Boolean about if this equals to obj.
+     * @example container.find(1).equals(container.end());
      */
     abstract equals(obj: ContainerIterator<T>): boolean;
+    /**
+     * @description Get a copy of itself.<br/>
+     *              We do not guarantee the safety of this function.<br/>
+     *              Please ensure that the iterator will not fail.
+     * @return The copy of self.
+     */
+    abstract copy(): ContainerIterator<T>;
 }
 ```
 
@@ -44,6 +54,8 @@ abstract class ContainerIterator<T> {
 `pre` 和 `next` 分别模拟了 `operator--` 和 `operator++`，该操作会改变迭代器本身
 
 `equals` 模拟了 `operator==`，用于鉴别两个迭代器是否相等 (指向同一位置)，它同样是根据 `node` 判断的
+
+由于 `pre` 和 `next` 会改变迭代器自身，但有时我们仍希望保留其值，`copy` 函数可返回自身的拷贝，用来解决这个问题
 
 ## VectorIterator, DequeIterator
 
