@@ -42,6 +42,7 @@
         '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
         '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
         '.*?/zh-cn/_sidebar.md': '/zh-cn/_sidebar.md',
+        '.*?/zh-cn/.*/_sidebar.md': '/zh-cn/_sidebar.md',
         '.*?/_navbar.md': '/_navbar.md',
         '.*?/_sidebar.md': '/_sidebar.md',
       },
