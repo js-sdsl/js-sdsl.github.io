@@ -1,4 +1,6 @@
-# Js-sdsl documentation
+# Js-sdsl official website
+
+English | [简体中文](https://github.com/js-sdsl/js-sdsl.github.io/blob/main/zh-cn/README.md)
 
 Driven by docsify engine, visit address: [https://js-sdsl.github.io/](https://js-sdsl.github.io/)
 
