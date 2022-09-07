@@ -137,7 +137,10 @@
       }
       const func = new Function(input.value);
       try {
+        const begin = Date.now();
         func();
+        const end = Date.now();
+        console.log(`Done in ${end - begin}ms.`);
       } catch (e) {
         console.log(e);
       }
