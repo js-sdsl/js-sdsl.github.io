@@ -123,6 +123,10 @@
     }
   }
   function addTry() {
+    if (
+        !location.hash.startsWith('#/start') &&
+        !location.hash.startsWith('#/zh-cn/start')
+    ) return;
     const input = document.getElementById('input');
     const output = document.getElementById('output');
     document.getElementById('run').onclick = function () {
@@ -146,7 +150,7 @@
   function onUrlHashChange() {
     setTimeout(addTry, 1000);
     const urlHash = window.location.hash;
-    let lang = urlHash.includes('zh-cn') ? 'zh-cn' : 'en';
+    let lang = urlHash.startsWith('#/zh-cn') ? 'zh-cn' : 'en';
     document.documentElement.setAttribute('lang', lang);
     const tableStyle = document.getElementById('table-style');
     if (urlHash.includes('performance')) {
