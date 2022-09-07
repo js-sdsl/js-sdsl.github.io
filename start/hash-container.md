@@ -27,6 +27,7 @@ mp.eraseElementByKey(1)     // O(1) ~ O(n)
 // custom hash function
 mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element]),
+    undefined,
     x => Number(x)
 );
 ```
@@ -42,6 +43,7 @@ mp.setElement(1, 2);        // O(1) ~ O(n)
 mp.eraseElementByKey(1)     // O(1) ~ O(n)
 mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element]),
+    undefined,
     x => Number(x)
 );
 mp.forEach(([key, value]) => console.log([key, value]));
