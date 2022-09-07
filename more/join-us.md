@@ -8,7 +8,7 @@ Now let's cover the preparations and what you can do.
 
 ## Help
 
-If you want to report bugs or make new requests, please submit an issue or pull request to [Github](https://github.com/js-sdsl/js-sdsl).
+If you want to report bugs or make new requests, please submit an issue or pull request to [GitHub](https://github.com/js-sdsl/js-sdsl).
 
 ## Contribute Your Code
 

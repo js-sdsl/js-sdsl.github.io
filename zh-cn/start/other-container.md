@@ -30,7 +30,7 @@ const f = q.front();        // O(1)
 const que = new PriorityQueue([1, 2, 3]);
 que.push(4);                // O(logn)
 que.pop();                  // O(logn)
-const t = q.top();          // O(1)
+const t = que.top();          // O(1)
 
 // 自定义比较函数
 new PriorityQueue([1, 2, 3], (x, y) => x - y);
@@ -38,3 +38,20 @@ new PriorityQueue([1, 2, 3], (x, y) => x - y);
 // 当第一个参数是数组时，可以指定 copy=false，即直接对原数组进行改变，而不是使用拷贝
 new PriorityQueue([1, 2, 3], undefined, false);
 ```
+
+## 尝试一下
+
+<p>
+<textarea id="input">
+const que = new PriorityQueue([1, 2, 3]);
+que.push(4);                // O(logn)
+que.pop();                  // O(logn)
+const t = que.top();        // O(1)
+console.log(t);             // 3
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>

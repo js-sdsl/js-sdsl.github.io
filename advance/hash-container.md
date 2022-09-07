@@ -1,4 +1,4 @@
-`HashSet` and `HashMap` inherit from the `HashContainerBase` abstract class. Unlike other containers, the design of these two containers refers to both `Java` and `C++`, and is mainly based on `HashTable` in `Java` ` Thought to write.
+`HashSet` and `HashMap` inherit from the `HashContainer` abstract class. Unlike other containers, the design of these two containers refers to both `Java` and `C++`, and is mainly based on `HashTable` in `Java` ` Thought to write.
 
 Although the `Set` and `Map` classes have been provided in ES6, Js-sdsl still provides Hash-related data structures, the purpose is also to expand its API, and we hope that Js-sdsl can provide a complete set of libraries, Instead of just being an extension, we can see that our future vision is very broad from the `JavaScript Standard Data Structure Library`. Based on this, we provide `HashSet` and `HashMap`.
 
@@ -10,10 +10,10 @@ When initialized, the hash table will provide a `hashTable` and `bucketNum`, for
 
 ```typescript
 class HashSet<K> {
-    // In the actual design, this property appears in HashContainerBase
+    // In the actual design, this property appears in HashContainer
     protected bucketNum: number;
     private hashTable: (Vector<K> | OrderedSet<K>)[] = [];
-    ...
+    // ...
 }
 ```
 
@@ -21,10 +21,10 @@ If it is a `HashMap`, then it will have one more `value`, like this:
 
 ```typescript
 class HashMap<K, V> {
-    // In the actual design, this property appears in HashContainerBase
+    // In the actual design, this property appears in HashContainer
     protected bucketNum: number;
     private hashTable: (Vector<[K, V]> | OrderedMap<K, V>)[] = [];
-    ...
+    // ...
 }
 ```
 
@@ -36,23 +36,23 @@ The function of `hashTable` is to record the first address of each **hash index*
 
 When the number at a single hash index is greater or less than a certain value, we will **tree/linked list**, this value is defined internally, of course, if you have special requirements, you can use `@ts -ignore` to make changes.
 
-### HashContainerBase.treeifyThreshold = 8
+### HashContainer.treeifyThreshold = 8
 
 **When inserting elements**, when the number of elements at a single hash index is greater than this value, it will be treed.
 
-### HashContainerBase.untreeifyThreshold = 6
+### HashContainer.untreeifyThreshold = 6
 
 **When deleting elements**, when the number of elements at a single hash index is less than this value, it will be linked list.
 
-### HashContainerBase.minTreeifySize = 64
+### HashContainer.minTreeifySize = 64
 
 **In order to avoid frequent treeing**, we stipulate that the linked list here will be treed only when the number of elements in the container is greater than this value, otherwise it will increase the number of buckets in the hash table, that is, increase the `hashTable` `bucketNum` to **double**.
 
-### HashContainerBase.sigma
+### HashContainer.sigma = 0.75
 
-The expansion coefficient of the hash table will only be expanded when the number of elements in the container is > bucketNum * HashContainerBase.sigma (it may also be smaller than minTreeifySize when treeing), that is, increase the `bucketNum` of `hashTable` to the original **double**.
+The expansion coefficient of the hash table will only be expanded when the number of elements in the container is greater than `bucketNum * HashContainer.sigma` (it may also be smaller than minTreeifySize when treeing), that is, increase the `bucketNum` of `hashTable` to the original **double**.
 
-### HashContainerBase.maxBucketNum = (1 << 30)
+### HashContainer.maxBucketNum = (1 << 30)
 
 The maximum value of `bucketNum`, when it reaches this value, the hash table will not be expanded again.
 

@@ -23,7 +23,7 @@ The memory in the Deque is allocated on demand, so you don't have to worry about
 
 When traversing the Deque, it starts from `map[first][curFirst]` and ends at `map[last][curLast]`. When accessing the index, we obtain the current element position according to the block size and the first and last pointers
 
-When the space inside the Deque is not enough, it will automatically expand the capacity. By default, it will expand to twice the current memory space. Since we use `map` to store the first address of each bucket, we **no need to move elements* when expanding the capacity. *, but **move the pointer**.
+When the space inside the Deque is not enough, it will automatically expand the capacity. By default, it will expand to twice the current memory space. Since we use `map` to store the first address of each bucket, we **don't need to move elements** when expanding the capacity but **move the pointer**.
 
 This makes Deque achieve an amortized `O(1)` time complexity when inserting elements, and found in [Benchmark](/zh-cn/test/benchmark) Faster than [`denque`](https://github.com/invertase/denque)!
 

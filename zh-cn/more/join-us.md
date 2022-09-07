@@ -12,7 +12,7 @@ Js-sdsl 仍在完善中，目前的版本是 4.x，我们预计在 5.x 或更高
 
 ## 贡献代码
 
-和其它的项目一样，我们欢迎您贡献您的代码，但为了能帮助您快速的解决您的问题或接收您的 PR，请务必先阅读这份[贡献指南](https://github.com/js-sdsl/js-sdsl/blob/main/.github/CONTRIBUTING.md)
+和其它的项目一样，我们欢迎您贡献您的代码，但为了能帮助您快速地解决您的问题或接收您的 PR，请务必先阅读这份[贡献指南](https://github.com/js-sdsl/js-sdsl/blob/main/.github/CONTRIBUTING.md)
 
 ## 翻译文档
 

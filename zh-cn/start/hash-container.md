@@ -22,11 +22,34 @@ const mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
 mp.setElement(1, 2);        // O(1) ~ O(n)
-st.eraseElementByKey(1)     // O(1) ~ O(n)
+mp.eraseElementByKey(1)     // O(1) ~ O(n)
 
 // 自定义哈希函数
-const mp = new HashMap(
-    [1, 2, 3].map((element, index) => [index, element])，
+mp = new HashMap(
+    [1, 2, 3].map((element, index) => [index, element]),
     x => Number(x)
 );
 ```
+
+## 尝试一下
+
+<p>
+<textarea id="input">
+let mp = new HashMap(
+    [1, 2, 3].map((element, index) => [index, element])
+);
+mp.setElement(1, 2);        // O(1) ~ O(n)
+mp.eraseElementByKey(1)     // O(1) ~ O(n)
+mp = new HashMap(
+    [1, 2, 3].map((element, index) => [index, element]),
+    x => Number(x)
+);
+mp.forEach(([key, value]) => console.log([key, value]));
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>
+

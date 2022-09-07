@@ -40,7 +40,7 @@ abstract class TreeBaseContainer<K, V> extends Base {
 
 当内部元素个数为 0 时 root 为 `undefined`
 
-这样定义的好处是我们可以在查找或遍历时快速且有序的进行，比如在**迭代器**访问时，我们会从 `header.leftChild` 开始遍历到 `header.rightChild`，并且在插入时会判断插入值是否为极端值（最大或最小），这样我们可以快速的将其插入到树中以提高性能
+这样定义的好处是我们可以在查找或遍历时快速且有序地进行，比如在**迭代器**访问时，我们会从 `header.leftChild` 开始遍历到 `header.rightChild`，并且在插入时会判断插入值是否为极端值（最大或最小），这样我们可以快速的将其插入到树中以提高性能
 
 它还支持传入自定义比较函数，比如这样:
 

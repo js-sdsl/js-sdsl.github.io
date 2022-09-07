@@ -25,9 +25,12 @@ Since there is no concept of pointers in Js, Js-sdsl simulates `*` operations by
 
 ```javascript
 const v = new Vector([1, 2, 3]);
-const it = v.begin();
+let it = v.begin();
 console.log(it.pointer);        // 1
-console.log(it.iteratorType);   // 'normal'
+console.log(
+    it.iteratorType === 
+    VectorIterator.NORMAL
+);                              // true
 it = it.next();
 console.log(it.pointer);        // 2
 it = it.pre();
@@ -41,9 +44,12 @@ for (
     console.log(i.pointer);     // 1, 2, 3
 }
 
-const It = v.rBegin();
+it = v.rBegin();
 console.log(it.pointer);        // 3
-console.log(it.iteratorType);   // 'reverse'
+console.log(
+    it.iteratorType ===
+    VectorIterator.REVERSE
+);                              // true
 it = it.next();
 console.log(it.pointer);        // 2
 it = it.pre();
@@ -51,3 +57,32 @@ console.log(it.pointer);        // 3
 ```
 
 **Note, as in C++, if you delete the element pointed to by the iterator, the iterator will be invalidated, which is a dangerous operation.**
+
+If you want to save an iterator before move it, you can use `copy`.
+
+```typescript
+const v = new Vector([1, 2, 3]);
+let it = v.begin();
+const itCopy = it.copy();
+it = it.next();
+console.log(it.pointer);        // 2
+console.log(itCopy.pointer);    // 1
+```
+
+## Try it
+
+<p>
+<textarea id="input">
+const v = new Vector([1, 2, 3]);
+let it = v.begin();
+const itCopy = it.copy();
+it = it.next();
+console.log(it.pointer);        // 2
+console.log(itCopy.pointer);    // 1
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>

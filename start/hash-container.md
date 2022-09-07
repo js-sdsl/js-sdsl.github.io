@@ -18,15 +18,37 @@ new HashSet([1, 2, 3], x => Number(x));
 Unordered key-value pair mapping set, automatically hash the key, the keys of all stored elements cannot be the same, support custom hash function.
 
 ```javascript
-const mp = new HashMap(
+let mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
 mp.setElement(1, 2);        // O(1) ~ O(n)
-st.eraseElementByKey(1)     // O(1) ~ O(n)
+mp.eraseElementByKey(1)     // O(1) ~ O(n)
 
 // custom hash function
-const mp = new HashMap(
-    [1, 2, 3].map((element, index) => [index, element])，
+mp = new HashMap(
+    [1, 2, 3].map((element, index) => [index, element]),
     x => Number(x)
 );
 ```
+
+## Try it
+
+<p>
+<textarea id="input">
+let mp = new HashMap(
+    [1, 2, 3].map((element, index) => [index, element])
+);
+mp.setElement(1, 2);        // O(1) ~ O(n)
+mp.eraseElementByKey(1)     // O(1) ~ O(n)
+mp = new HashMap(
+    [1, 2, 3].map((element, index) => [index, element]),
+    x => Number(x)
+);
+mp.forEach(([key, value]) => console.log([key, value]));
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>

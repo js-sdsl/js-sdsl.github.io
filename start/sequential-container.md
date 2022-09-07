@@ -35,8 +35,28 @@ Deque combines the shortcomings of Vector and LinkList, it can easily insert and
 But it can't remove elements in arbitrary positions as fast as LinkList.
 
 ```javascript
-const list = new Deque([1, 2, 3]);
-list.pushBack(1);                   // O(1)
-list.getElementByPos(2)             // O(1)
-list.eraseElementByPos(0)           // O(n)
+const que = new Deque([1, 2, 3]);
+que.pushBack(1);                   // O(1)
+que.getElementByPos(2)             // O(1)
+que.eraseElementByPos(0)           // O(n)
 ```
+
+
+## Try it
+
+<p>
+<textarea id="input">
+const que = new Deque([1, 2, 3]);
+que.pushBack(1);                   // O(1)
+que.getElementByPos(2)             // O(1)
+que.eraseElementByPos(0)           // O(n)
+console.log(
+    que.getElementByPos(1)
+);                                 // 3
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>

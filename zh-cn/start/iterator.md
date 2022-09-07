@@ -25,7 +25,7 @@ for (const u of v) {
 
 ```javascript
 const v = new Vector([1, 2, 3]);
-const it = v.begin();
+let it = v.begin();
 console.log(it.pointer);        // 1
 console.log(it.iteratorType);   // 'normal'
 it = it.next();
@@ -41,7 +41,7 @@ for (
     console.log(i.pointer);     // 1, 2, 3
 }
 
-const It = v.rBegin();
+it = v.rBegin();
 console.log(it.pointer);        // 3
 console.log(it.iteratorType);   // 'reverse'
 it = it.next();
@@ -51,3 +51,21 @@ console.log(it.pointer);        // 3
 ```
 
 **注意，和 C++ 一样，如果你删除了迭代器所指向的元素，那么迭代器会失效，这是一个危险的操作**
+
+## Try it
+
+<p>
+<textarea id="input">
+const v = new Vector([1, 2, 3]);
+let it = v.begin();
+const itCopy = it.copy();
+it = it.next();
+console.log(it.pointer);        // 2
+console.log(itCopy.pointer);    // 1
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>

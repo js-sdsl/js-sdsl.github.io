@@ -12,5 +12,5 @@
 - 没有任何外部依赖
 - 实现了 C++ STL 双向跌迭代器
 
-[GitHub](//github.com/js-sdsl/js-sdsl/)
+[GitHub](https://github.com/js-sdsl/js-sdsl/)
 [Get Started](/zh-cn/README.md)

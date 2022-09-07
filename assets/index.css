@@ -67,3 +67,28 @@ section.cover .cover-main {
     padding-right: 20px;
   }
 }
+#input {
+  width: 100%;
+  min-height: 120px;
+  margin: 0;
+  padding: 0.8em;
+  resize: vertical;
+}
+#output {
+  width: 100%;
+  min-height: 120px;
+  background-color: #f9f9fb;
+  margin: 0;
+  padding: 0.8em;
+  border: 1px solid #cdcdcd;
+  border-radius: 0.25rem;
+}
+#run {
+  width: 100px;
+  height: 30px;
+  margin-right: 20px;
+}
+#reset {
+  width: 100px;
+  height: 30px;
+}

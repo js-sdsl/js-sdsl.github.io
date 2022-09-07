@@ -27,7 +27,7 @@ Js-sdsl 是一款参考 C++ STL 实现的 JavaScript 标准数据结构库，用
 <!-- 开发环境 -->
 <script src='https://unpkg.com/js-sdsl/dist/umd/js-sdsl.js' />
 <!-- 发布环境 -->
-<script src='hhttps://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js' />
+<script src='https://unpkg.com/js-sdsl/dist/umd/js-sdsl.min.js' />
 ```
 
 或者使用 npm
@@ -76,3 +76,18 @@ console.log(myOrderedMap.getElementByKey(1)); // 2
 ## 准备好了吗？
 
 我们刚才简单的介绍了 Js-sdsl，接下来将从容器类别开始进行更加深入的学习！
+
+## 尝试一下
+
+<p>
+<textarea id="input">
+const myOrderedMap = new OrderedMap();
+myOrderedMap.setElement(1, 2);
+console.log(myOrderedMap.getElementByKey(1)); // 2
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>

@@ -1,6 +1,6 @@
 (function (window) {
-  const editOnGithubWhiteList = ['README', 'benchmark', 'performance'];
   function getDocsifyConfig() {
+    const editOnGithubWhiteList = ['README', 'benchmark', 'performance'];
     return {
       el: '#root',
       name: 'Js-sdsl',
@@ -33,6 +33,20 @@
         },
         crossChapter: true,
         crossChapterText: true,
+      },
+      copyCode: {
+        buttonText: {
+          '/zh-cn/': '复制',
+          '/'      : 'Copy'
+        },
+        errorText: {
+          '/zh-cn/': '出错了',
+          '/'      : 'Error'
+        },
+        successText: {
+          '/zh-cn/': '复制成功',
+          '/'      : 'Copied'
+        }
       },
       alias: {
         '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
@@ -108,7 +122,29 @@
       document.head.appendChild(style);
     }
   }
+  function addTry() {
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+    document.getElementById('run').onclick = function () {
+      output.innerText = '';
+      const log = console.log;
+      console.log = function (...data) {
+        output.innerText += '> ' + data.join(' ') + '\n';
+      }
+      const func = new Function(input.value);
+      try {
+        func();
+      } catch (e) {
+        console.log(e);
+      }
+      console.log = log;
+    };
+    document.getElementById('reset').onclick = function () {
+      output.innerText = '';
+    }
+  }
   function onUrlHashChange() {
+    setTimeout(addTry, 1000);
     const urlHash = window.location.hash;
     let lang = urlHash.includes('zh-cn') ? 'zh-cn' : 'en';
     document.documentElement.setAttribute('lang', lang);
@@ -137,8 +173,9 @@
       mainStyle.innerHTML = '';
     }
   }
-  changeSectionSize();
   window.$docsify = getDocsifyConfig();
-  onUrlHashChange();
+  window.addEventListener('load', changeSectionSize);
+  window.addEventListener('load', onUrlHashChange);
+  window.addEventListener('load', addTry);
   window.onhashchange = onUrlHashChange;
 })(window);

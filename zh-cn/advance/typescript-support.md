@@ -7,7 +7,7 @@ const v = new Vector<number>([1, 2, 3]);
 const mp = new OrderedMap<string, number>(
     [1, 2, 3].map(
         (element, index) => [JSON.stringify(element), index]
-    );
+    )
 );
 ```
 
@@ -35,7 +35,7 @@ for (const c of arr) {
 const mp = new OrderedMap<string, number>(
     [1, 2, 3].map(
         (element, index) => [JSON.stringify(element), index]
-    );
+    )
 );
 const it = mp.begin();
 const key =  it.pointer[0];     // inferred as a string
@@ -44,3 +44,5 @@ const value = it.pointer[1];    // inferred as a number
 
 
 除上述几种方案外，几乎所有的取值操作编译器都会推断出一个确定的类型，这在开发中相信是极为便利的一件事
+
+我们提供三种抽象容器类型，`SequentialContainer`, `TreeContainer` 和 `HashContainer`

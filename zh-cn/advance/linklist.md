@@ -1,6 +1,6 @@
 ## LinkNode
 
-LinkNode 是内置的链表指针，是双向的，包含 `pre`，`next` 和 `value` 三种属性，分别表示前置指针，后一指针和存储的元素
+LinkNode 是内置的链表指针，是双向的，包含 `pre`，`next` 和 `value` 三种属性，分别表示前置指针，后置指针和存储的元素
 
 ## LinkList
 

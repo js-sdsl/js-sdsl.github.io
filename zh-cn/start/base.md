@@ -54,3 +54,19 @@ v.clear();
 console.log(v.size());    // 0
 console.log(v.empty());   // true
 ```
+
+## 尝试一下
+
+<p>
+<textarea id="input">
+const v = new Vector([1, 2, 3]);
+v.clear();
+console.log(v.size());    // 0
+console.log(v.empty());   // true
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>

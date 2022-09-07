@@ -22,10 +22,10 @@ v.eraseElementByPos(0)              // O(n)
 Js-sdsl 中的链表固定是双向的，这意味着其在头部或尾部的插入和删除都是极为方便的，但在按索引访问时性能较差
 
 ```javascript
-const list = new LinkList([1, 2, 3]);
-list.pushBack(1);                   // O(1)
-list.getElementByPos(2)             // O(n)
-list.eraseElementByPos(0)           // O(1)
+const que = new LinkList([1, 2, 3]);
+que.pushBack(1);                   // O(1)
+que.getElementByPos(2)             // O(n)
+que.eraseElementByPos(0)           // O(1)
 ```
 
 ## Deque
@@ -40,3 +40,22 @@ list.pushBack(1);                   // O(1)
 list.getElementByPos(2)             // O(1)
 list.eraseElementByPos(0)           // O(n)
 ```
+
+## 尝试一下
+
+<p>
+<textarea id="input">
+const que = new Deque([1, 2, 3]);
+que.pushBack(1);                   // O(1)
+que.getElementByPos(2)             // O(1)
+que.eraseElementByPos(0)           // O(n)
+console.log(
+    que.getElementByPos(1)
+);                                 // 3
+</textarea>
+</p>
+
+<div id="output"></div>
+
+<button id="run">Run it</button>
+<button id="reset">Reset</button>
