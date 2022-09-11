@@ -1,8 +1,7 @@
-(function (window) {
+(function () {
   function getDocsifyConfig() {
     const editOnGithubWhiteList = ['README', 'benchmark', 'performance'];
     return {
-      el: '#root',
       name: 'Js-sdsl',
       nameLink: {
         '/zh-cn/': '#/zh-cn/',
@@ -15,6 +14,10 @@
       autoHeader: true,
       mergeNavbar: true,
       loadSidebar: true,
+      notFoundPage: {
+        '/zh-cn': '/zh-cn/README',
+        '/': '/README'
+      },
       coverpage: ['/zh-cn/', '/'],
       logo: '/assets/logo-small.png',
       count: {
@@ -40,7 +43,7 @@
           '/'      : 'Copy'
         },
         errorText: {
-          '/zh-cn/': '出错了',
+          '/zh-cn/': '复制失败',
           '/'      : 'Error'
         },
         successText: {
@@ -49,16 +52,15 @@
         }
       },
       alias: {
-        '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
-        '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
-        '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
-        '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md',
-        '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
-        '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
-        '.*?/zh-cn/_sidebar.md': '/zh-cn/_sidebar.md',
         '.*?/zh-cn/.*/_sidebar.md': '/zh-cn/_sidebar.md',
+        '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
+        '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
         '.*?/_navbar.md': '/_navbar.md',
         '.*?/_sidebar.md': '/_sidebar.md',
+        '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
+        '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
+        '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
+        '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md'
       },
       plugins: [
         EditOnGithubPlugin.create(
@@ -70,9 +72,9 @@
             })) {
               return '';
             } else if (file.indexOf('zh-cn') >= 0) {
-              return '在 github 上编辑此页';
+              return '在 GitHub 上编辑此页';
             } else {
-              return 'Edit on github';
+              return 'Edit on GitHub';
             }
           })
       ],
@@ -102,34 +104,37 @@
         }
       },
       timeUpdater: {
-        text: '<p align="right">last update time: <strong>{docsify-updated}</strong></p>',
-        formatUpdated: '{YYYY}-{MM}-{DD}',
+        text: '<p align="right">Posted @ <strong>{docsify-updated}</strong></p>',
+        formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
         whereToPlace: 'top',
       },
       repo: 'https://github.com/js-sdsl/js-sdsl'
     }
   }
-  function changeSectionSize() {
+  function zoomWindow() {
     const minWidth = 400;
-    const width = window.screen.width;
+    const width = screen.width;
     if (width <= minWidth) {
       const zoom = width / minWidth;
       const style = document.createElement('style');
-      style.innerHTML =
-        `section.cover > * {
-          zoom: ${zoom};
-        }`;
+      style.innerHTML = `section.cover>*{zoom: ${zoom};}`;
       document.head.appendChild(style);
     }
   }
-  function addTry() {
+  function addTry(urlHash) {
     if (
-        !location.hash.startsWith('#/start') &&
-        !location.hash.startsWith('#/zh-cn/start')
-    ) return;
+        !urlHash.startsWith('#/start') &&
+        !urlHash.startsWith('#/zh-cn/start')
+    ) return true;
     const input = document.getElementById('input');
+    if (!input) return false;
     const output = document.getElementById('output');
-    document.getElementById('run').onclick = function () {
+    if (!output) return false;
+    const run = document.getElementById('run');
+    if (!run) return false;
+    const reset = document.getElementById('reset');
+    if (!reset) return false;
+    run.onclick = function () {
       output.innerText = '';
       const log = console.log;
       console.log = function (...data) {
@@ -146,23 +151,27 @@
       }
       console.log = log;
     };
-    document.getElementById('reset').onclick = function () {
+    reset.onclick = function () {
       output.innerText = '';
     }
+    return true;
   }
-  function onUrlHashChange() {
-    setTimeout(addTry, 1000);
-    const urlHash = window.location.hash;
-    let lang = urlHash.startsWith('#/zh-cn') ? 'zh-cn' : 'en';
+  function onHashChange() {
+    const urlHash = location.hash;
+    const id = setInterval(function () {
+      try {
+        if (addTry(urlHash)) clearInterval(id);
+      } catch (e) {
+        console.error(e);
+        clearInterval(id);
+      }
+    }, 1000);
+    const lang = urlHash.startsWith('#/zh-cn') ? 'zh-cn' : 'en';
     document.documentElement.setAttribute('lang', lang);
     const tableStyle = document.getElementById('table-style');
     if (urlHash.includes('performance')) {
       tableStyle.innerHTML =
-        `.markdown-section table {
-            display: table;
-            text-align: center;
-            table-layout: fixed;
-          }`;
+        '.markdown-section table{display:table;text-align:center;table-layout:fixed;}';
     } else {
       tableStyle.innerHTML = '';
     }
@@ -172,17 +181,13 @@
     );
     const mainStyle = document.getElementById('main-style');
     if (mathResult) {
-      mainStyle.innerHTML =
-        `body > main {
-          display: none;
-        }`;
+      mainStyle.innerHTML = 'body>main{display:none;}';
     } else {
       mainStyle.innerHTML = '';
     }
   }
   window.$docsify = getDocsifyConfig();
-  window.addEventListener('load', changeSectionSize);
-  window.addEventListener('load', onUrlHashChange);
-  window.addEventListener('load', addTry);
-  window.onhashchange = onUrlHashChange;
-})(window);
+  window.addEventListener('load', zoomWindow);
+  window.addEventListener('load', onHashChange);
+  window.addEventListener('hashchange', onHashChange);
+})();

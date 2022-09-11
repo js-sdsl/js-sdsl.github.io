@@ -4,9 +4,9 @@ div#root {
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  margin: 0 auto;
 }
-h3 > a {
+h3 > a,
+.markdown-section table td {
   word-break: break-all;
 }
 body,
@@ -20,28 +20,21 @@ body.sticky .sidebar-toggle {
 .cover-main {
   font-size: 1.2rem;
 }
-.cover-main>p:first-of-type {
-  margin: 0;
-}
-.cover-main>blockquote {
-  margin: 0;
-}
-.cover-main>blockquote>p {
-  margin: 10px 0 0;
-}
-.cover-main>p>img {
-  width: 120px;
-}
+.cover-main > p:first-of-type,
+.cover-main > blockquote,
 section.cover .cover-main {
   margin: 0;
+}
+.cover-main > blockquote > p {
+  margin: 10px 0 0;
+}
+.cover-main > p > img {
+  width: 120px;
 }
 .markdown-section {
   overflow: auto;
   max-width: 800px;
   margin: 0 0 0 300px;
-}
-.markdown-section table td {
-  word-break: break-all;
 }
 @media screen and (max-width: 1700px) {
   .markdown-section {
