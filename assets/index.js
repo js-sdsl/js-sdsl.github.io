@@ -1,6 +1,19 @@
 (function () {
   function getDocsifyConfig() {
-    const editOnGithubWhiteList = ['README', 'benchmark', 'performance'];
+    const alias = {
+      '.*?/zh-cn/_sidebar.md': '/zh-cn/_sidebar.md',
+      '.*?/zh-cn/.*/_sidebar.md': '/zh-cn/_sidebar.md',
+      '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
+      '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
+      '.*?/_navbar.md': '/_navbar.md',
+      '.*?/_sidebar.md': '/_sidebar.md',
+      '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
+      '.*?/changelog': '//cdn.jsdelivr.net/npm/js-sdsl/CHANGELOG.md',
+      '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
+      '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
+      '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md'
+    }
+    const editOnGithubWhiteList = Object.values(alias);
     return {
       name: 'Js-sdsl',
       nameLink: {
@@ -51,26 +64,14 @@
           '/'      : 'Copied'
         }
       },
-      alias: {
-        '.*?/zh-cn/_sidebar.md': '/zh-cn/_sidebar.md',
-        '.*?/zh-cn/.*/_sidebar.md': '/zh-cn/_sidebar.md',
-        '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
-        '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
-        '.*?/_navbar.md': '/_navbar.md',
-        '.*?/_sidebar.md': '/_sidebar.md',
-        '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
-        '.*?/changelog': '//cdn.jsdelivr.net/npm/js-sdsl/CHANGELOG.md',
-        '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
-        '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
-        '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md'
-      },
+      alias,
       plugins: [
         EditOnGithubPlugin.create(
           'https://github.com/js-sdsl/js-sdsl.github.io/blob/main/',
           null,
           function (file) {
             if (editOnGithubWhiteList.some(function (str) {
-              return file.indexOf(str) >= 0;
+              return str.indexOf(file) >= 0;
             })) {
               return '';
             } else if (file.indexOf('zh-cn') >= 0) {
