@@ -8,7 +8,7 @@
       '.*?/_navbar.md': '/_navbar.md',
       '.*?/_sidebar.md': '/_sidebar.md',
       '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
-      '.*?/changelog': '//cdn.jsdelivr.net/npm/js-sdsl/CHANGELOG.md',
+      '.*?/changelog': '//raw.githubusercontent.com/js-sdsl/js-sdsl/main/CHANGELOG.md',
       '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
       '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
       '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md'
@@ -107,7 +107,7 @@
         }
       },
       timeUpdater: {
-        text: '<p align="right">Posted @ <strong>{docsify-updated}</strong></p>',
+        text: '<p align="right">Posted @ <strong id="post-date">{docsify-updated}</strong></p>',
         formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
         whereToPlace: 'top',
       },
@@ -161,14 +161,22 @@
   }
   function onHashChange() {
     const urlHash = location.hash;
-    const id = setInterval(function () {
+    const tryId = setInterval(function () {
       try {
-        if (addTry(urlHash)) clearInterval(id);
+        if (addTry(urlHash)) clearInterval(tryId);
       } catch (e) {
         console.error(e);
-        clearInterval(id);
+        clearInterval(tryId);
       }
     }, 1000);
+    const postDateId = setInterval(function () {
+      const postDate = document.getElementById('post-date');
+      if (!postDate) return;
+      if (postDate.innerText.indexOf('docsify-updated') >= 0) {
+        postDate.parentElement.remove();
+      }
+      clearInterval(postDateId);
+    }, 100);
     const lang = urlHash.startsWith('#/zh-cn') ? 'zh-cn' : 'en';
     document.documentElement.setAttribute('lang', lang);
     const tableStyle = document.getElementById('table-style');
