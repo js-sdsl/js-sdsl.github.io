@@ -26,4 +26,5 @@
 
 - **Extra Topics**
   - [API Document](/more/api-document.md)
+  - [CHANGELOG](/more/changelog)
   - [Join Us](/more/join-us.md)

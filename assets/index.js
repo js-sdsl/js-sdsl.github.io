@@ -52,12 +52,14 @@
         }
       },
       alias: {
+        '.*?/zh-cn/_sidebar.md': '/zh-cn/_sidebar.md',
         '.*?/zh-cn/.*/_sidebar.md': '/zh-cn/_sidebar.md',
         '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
         '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
         '.*?/_navbar.md': '/_navbar.md',
         '.*?/_sidebar.md': '/_sidebar.md',
         '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
+        '.*?/changelog': '//cdn.jsdelivr.net/npm/js-sdsl/CHANGELOG.md',
         '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
         '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
         '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md'
