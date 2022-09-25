@@ -3,15 +3,15 @@
     const alias = {
       '.*?/zh-cn/_sidebar.md': '/zh-cn/_sidebar.md',
       '.*?/zh-cn/.*/_sidebar.md': '/zh-cn/_sidebar.md',
-      '.*?/zh-cn/README': '//js-sdsl.github.io/js-sdsl/README.zh-CN.md',
-      '.*?/zh-cn/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
+      '.*?/zh-cn/README': 'https://js-sdsl.github.io/js-sdsl/README.zh-CN.md',
+      '.*?/zh-cn/test/benchmark-analyze': 'https://js-sdsl.github.io/benchmark/resultAnalyze.zh-CN.md',
       '.*?/_navbar.md': '/_navbar.md',
       '.*?/_sidebar.md': '/_sidebar.md',
-      '.*?/README': '//js-sdsl.github.io/js-sdsl/README.md',
-      '.*?/changelog': '//unpkg.com/js-sdsl/CHANGELOG.md',
-      '.*?/test/benchmark-result': '//js-sdsl.github.io/benchmark/README.md',
-      '.*?/test/performance-test': '//js-sdsl.github.io/js-sdsl/performance.md',
-      '.*?/test/benchmark-analyze': '//js-sdsl.github.io/benchmark/resultAnalyze.md'
+      '.*?/README': 'https://js-sdsl.github.io/js-sdsl/README.md',
+      '.*?/changelog': 'https://cdn.jsdelivr.net/npm/js-sdsl/CHANGELOG.md',
+      '.*?/test/benchmark-result': 'https://js-sdsl.github.io/benchmark/README.md',
+      '.*?/test/performance-test': 'https://js-sdsl.github.io/js-sdsl/performance.md',
+      '.*?/test/benchmark-analyze': 'https://js-sdsl.github.io/benchmark/resultAnalyze.md'
     }
     const editOnGithubWhiteList = Object.values(alias);
     return {
