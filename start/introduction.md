@@ -63,7 +63,7 @@ npm i js-sdsl
 
 ### Npm
 
-```javascript
+```typescript
 // esModule
 import { OrderedMap } from 'js-sdsl';
 // commonJs
@@ -81,14 +81,14 @@ We have just briefly introduced Js-sdsl, and then we will start with a more in-d
 ## Try it
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const myOrderedMap = new OrderedMap();
 myOrderedMap.setElement(1, 2);
 console.log(myOrderedMap.getElementByKey(1)); // 2
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

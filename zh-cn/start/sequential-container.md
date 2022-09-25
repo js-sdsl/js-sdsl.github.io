@@ -8,7 +8,7 @@
 
 Vector 可以从尾部插入和删除数据，但是不善于在其他地方进行操作
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 v.pushBack(1);                      // O(1)
 v.getElementByPos(2)                // O(1)
@@ -21,7 +21,7 @@ v.eraseElementByPos(0)              // O(n)
 
 Js-sdsl 中的链表固定是双向的，这意味着其在头部或尾部的插入和删除都是极为方便的，但在按索引访问时性能较差
 
-```javascript
+```typescript
 const que = new LinkList([1, 2, 3]);
 que.pushBack(1);                   // O(1)
 que.getElementByPos(2)             // O(n)
@@ -34,7 +34,7 @@ Deque 结合了 Vector 和 LinkList 的不足，它既可以方便的在头部�
 
 但是它不能像 LinkList 一样快速删除任意位置的元素
 
-```javascript
+```typescript
 const list = new Deque([1, 2, 3]);
 list.pushBack(1);                   // O(1)
 list.getElementByPos(2)             // O(1)
@@ -44,7 +44,7 @@ list.eraseElementByPos(0)           // O(n)
 ## 尝试一下
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const que = new Deque([1, 2, 3]);
 que.pushBack(1);                   // O(1)
 que.getElementByPos(2)             // O(1)
@@ -55,7 +55,7 @@ console.log(
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

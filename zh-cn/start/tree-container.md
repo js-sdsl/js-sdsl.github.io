@@ -4,7 +4,7 @@
 
 有序集合，存储的所有元素不可以相同，支持自定义比较函数
 
-```javascript
+```typescript
 const st = new OrderedSet([1, 2, 3]);
 st.insert(4);               // O(logn)
 st.eraseElementByKey(4)     // O(logn)
@@ -20,7 +20,7 @@ console.log(new OrderedSet([1, 2], undefined, true).begin(),next().index);   // 
 
 有序键值对映射集合，自动按 key 排序，存储的所有元素的 key 不可以相同，支持自定义比较函数
 
-```javascript
+```typescript
 let mp = new OrderedMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -40,7 +40,7 @@ console.log(new OrderedMap([[0, 1], [1, 1]], undefined, true).begin(),next().ind
 ## 尝试一下
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 let mp = new OrderedMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -54,7 +54,7 @@ mp.forEach(([key, value]) => console.log([key, value]));
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

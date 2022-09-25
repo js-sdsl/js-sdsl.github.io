@@ -4,7 +4,7 @@ Hash containers, also known as unordered associative containers, also store key-
 
 Unordered collection, all stored elements cannot be the same, support custom hash function.
 
-```javascript
+```typescript
 const st = new HashSet([1, 2, 3]);
 st.insert(4);               // O(1) ~ O(n)
 st.eraseElementByKey(4)     // O(1) ~ O(n)
@@ -17,7 +17,7 @@ new HashSet([1, 2, 3], x => Number(x));
 
 Unordered key-value pair mapping set, automatically hash the key, the keys of all stored elements cannot be the same, support custom hash function.
 
-```javascript
+```typescript
 let mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -35,7 +35,7 @@ mp = new HashMap(
 ## Try it
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 let mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -50,7 +50,7 @@ mp.forEach(([key, value]) => console.log([key, value]));
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

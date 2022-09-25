@@ -12,7 +12,7 @@ Due to the garbage collection mechanism in Javascript, we don't need to worry ab
 
 All containers in Js-sdsl have a constructor that accepts an object with a `forEach` iterable function for initialization. Take Vector as an example:
 
-```javascript
+```typescript
 new Vector();
 new Vector([]);
 new Vector([1, 2, 3]);
@@ -29,7 +29,7 @@ All containers in Js-sdsl provide the three functions size, empty, clear because
 
 Get the size of the container.
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 console.log(v.size());   // 3
 ```
@@ -38,7 +38,7 @@ console.log(v.size());   // 3
 
 Check if the container is empty.
 
-```javascript
+```typescript
 new Vector().empty();     // true
 const v = new Vector([1, 2, 3]);
 console.log(v.empty());   // false
@@ -48,7 +48,7 @@ console.log(v.empty());   // false
 
 Clear the container.
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 v.clear();
 console.log(v.size());    // 0
@@ -58,7 +58,7 @@ console.log(v.empty());   // true
 ## Try it
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const v = new Vector([1, 2, 3]);
 v.clear();
 console.log(v.size());    // 0
@@ -66,7 +66,7 @@ console.log(v.empty());   // true
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

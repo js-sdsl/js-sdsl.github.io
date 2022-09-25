@@ -4,7 +4,7 @@
 
 栈，后进先出结构
 
-```javascript
+```typescript
 const s = new Stack([1, 2, 3]);
 s.push(4);                  // O(1)
 s.pop();                    // O(1)
@@ -15,7 +15,7 @@ const t = s.top();          // O(1)
 
 队列，先进先出结构
 
-```javascript
+```typescript
 const q = new Queue([1, 2, 3]);
 q.push(4);                  // O(1)
 q.pop();                    // O(1)
@@ -26,7 +26,7 @@ const f = q.front();        // O(1)
 
 优先队列，堆实现，一个保证最大元素总在队列最前面的队列，支持自定义比较函数
 
-```javascript
+```typescript
 const que = new PriorityQueue([1, 2, 3]);
 que.push(4);                // O(logn)
 que.pop();                  // O(logn)
@@ -42,7 +42,7 @@ new PriorityQueue([1, 2, 3], undefined, false);
 ## 尝试一下
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const que = new PriorityQueue([1, 2, 3]);
 que.push(4);                // O(logn)
 que.pop();                  // O(logn)
@@ -51,7 +51,7 @@ console.log(t);             // 3
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

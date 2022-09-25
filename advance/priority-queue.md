@@ -9,7 +9,7 @@ The implementation in Js-sdsl is not much different from most implementations on
 
 E.g:
 
-```javascript
+```typescript
 const arr = [1, 2, 3, 4, 5];
 const que = new PriorityQueue(
     // initialize the incoming arr, the complexity of doing so is O(n)

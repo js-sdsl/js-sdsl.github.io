@@ -4,7 +4,7 @@ The tree container contains OrderedSet and OrderedMap implemented by red-black t
 
 Ordered collection, all stored elements cannot be the same, support custom comparison function.
 
-```javascript
+```typescript
 const st = new OrderedSet([1, 2, 3]);
 st.insert(4);               // O(logn)
 st.eraseElementByKey(4)     // O(logn)
@@ -20,7 +20,7 @@ console.log(new OrderedSet([1, 2], undefined, true).begin(),next().index);   // 
 
 Ordered key-value pair mapping set, automatically sorted by key, the keys of all stored elements cannot be the same, support custom comparison functions.
 
-```javascript
+```typescript
 const mp = new OrderedMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -40,7 +40,7 @@ console.log(new OrderedMap([[0, 1], [1, 1]], undefined, true).begin(),next().ind
 ## Try it
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 let mp = new OrderedMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -54,7 +54,7 @@ mp.forEach(([key, value]) => console.log([key, value]));
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

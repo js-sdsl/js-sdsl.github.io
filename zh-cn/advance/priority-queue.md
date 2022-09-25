@@ -9,7 +9,7 @@ Js-sdsl 中的实现和网络上大多数的实现没有太多区别，不过我
 
 例如:
 
-```javascript
+```typescript
 const arr = [1, 2, 3, 4, 5];
 const que = new PriorityQueue(
     arr,                                // 初始化传入 arr，这样做的复杂度是 O(n)

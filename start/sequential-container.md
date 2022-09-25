@@ -8,7 +8,7 @@ For the basic introduction, see [Base](/zh-cn/start/base.md).
 
 Vector can insert and delete data from the tail, but is not good at doing it elsewhere.
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 v.pushBack(1);                      // O(1)
 v.getElementByPos(2)                // O(1)
@@ -21,7 +21,7 @@ Linked list is also a common data structure, which can store elements in discont
 
 The linked list in Js-sdsl is bidirectional, which means that it is extremely convenient to insert and delete at the head or tail, but the performance is poor when accessing by index.
 
-```javascript
+```typescript
 const list = new LinkList([1, 2, 3]);
 list.pushBack(1);                   // O(1)
 list.getElementByPos(2)             // O(n)
@@ -34,7 +34,7 @@ Deque combines the shortcomings of Vector and LinkList, it can easily insert and
 
 But it can't remove elements in arbitrary positions as fast as LinkList.
 
-```javascript
+```typescript
 const que = new Deque([1, 2, 3]);
 que.pushBack(1);                   // O(1)
 que.getElementByPos(2)             // O(1)
@@ -45,7 +45,7 @@ que.eraseElementByPos(0)           // O(n)
 ## Try it
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const que = new Deque([1, 2, 3]);
 que.pushBack(1);                   // O(1)
 que.getElementByPos(2)             // O(1)
@@ -56,7 +56,7 @@ console.log(
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

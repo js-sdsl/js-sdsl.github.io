@@ -4,7 +4,7 @@
 
 无序集合，存储的所有元素不可以相同，支持自定义哈希函数
 
-```javascript
+```typescript
 const st = new HashSet([1, 2, 3]);
 st.insert(4);               // O(1) ~ O(n)
 st.eraseElementByKey(4)     // O(1) ~ O(n)
@@ -17,7 +17,7 @@ new HashSet([1, 2, 3], x => Number(x));
 
 无序键值对映射集合，自动对 key 哈希，存储的所有元素的 key 不可以相同，支持自定义哈希函数
 
-```javascript
+```typescript
 let mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -35,7 +35,7 @@ mp = new HashMap(
 ## 尝试一下
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 let mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
@@ -50,8 +50,8 @@ mp.forEach(([key, value]) => console.log([key, value]));
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>
 

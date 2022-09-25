@@ -12,7 +12,7 @@ Vector 是 C++ STL 中的一种简单结构，用于动态分配内存，以避�
 
 Js-sdsl 中所有的容器都有一个构造器，接收一个具有 `forEach` 可迭代函数的对象，用于初始化，以 Vector 为例: 
 
-```javascript
+```typescript
 new Vector();
 new Vector([]);
 new Vector([1, 2, 3]);
@@ -29,7 +29,7 @@ Js-sdsl 中的所有容器都提供 size, empty, clear 这三个函数，因为�
 
 获取容器的大小
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 console.log(v.size());   // 3
 ```
@@ -38,7 +38,7 @@ console.log(v.size());   // 3
 
 判断容器是否为空
 
-```javascript
+```typescript
 new Vector().empty();     // true
 const v = new Vector([1, 2, 3]);
 console.log(v.empty());   // false
@@ -48,7 +48,7 @@ console.log(v.empty());   // false
 
 清空容器
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 v.clear();
 console.log(v.size());    // 0
@@ -58,7 +58,7 @@ console.log(v.empty());   // true
 ## 尝试一下
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const v = new Vector([1, 2, 3]);
 v.clear();
 console.log(v.size());    // 0
@@ -66,7 +66,7 @@ console.log(v.empty());   // true
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

@@ -6,7 +6,7 @@ In addition to the above containers, Js-sdsl also provides three adapters: stack
 
 Last in first out structure.
 
-```javascript
+```typescript
 const s = new Stack([1, 2, 3]);
 s.push(4);                  // O(1)
 s.pop();                    // O(1)
@@ -18,7 +18,7 @@ console.log(t);             // 3
 
 First in first out structure.
 
-```javascript
+```typescript
 const q = new Queue([1, 2, 3]);
 q.push(4);                  // O(1)
 q.pop();                    // O(1)
@@ -30,7 +30,7 @@ console.log(t);             // 1
 
 Priority queue, heap implementation, a queue that guarantees that the largest element is always at the front of the queue, supports custom comparison functions.
 
-```javascript
+```typescript
 const que = new PriorityQueue([1, 2, 3]);
 que.push(4);                // O(logn)
 que.pop();                  // O(logn)
@@ -50,7 +50,7 @@ new PriorityQueue([1, 2, 3], undefined, false);
 ## Try it
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const que = new PriorityQueue([1, 2, 3]);
 que.push(4);                // O(logn)
 que.pop();                  // O(logn)
@@ -59,7 +59,7 @@ console.log(t);             // 3
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>

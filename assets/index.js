@@ -107,7 +107,7 @@
         }
       },
       timeUpdater: {
-        text: '<p align="right">Posted @ <strong id="post-date">{docsify-updated}</strong></p>',
+        text: '<p align=\'right\'>Posted @ <strong id=\'post-date\'>{docsify-updated}</strong></p>',
         formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
         whereToPlace: 'top',
       },

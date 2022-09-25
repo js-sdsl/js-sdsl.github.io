@@ -63,7 +63,7 @@ console.log(it.pointer);        // 3
 ## Try it
 
 <p>
-<textarea id="input">
+<textarea id='input'>
 const v = new Vector([1, 2, 3]);
 let it = v.begin();
 const itCopy = it.copy();
@@ -73,7 +73,7 @@ console.log(itCopy.pointer);    // 1
 </textarea>
 </p>
 
-<div id="output"></div>
+<div id='output'></div>
 
-<button id="run">Run it</button>
-<button id="reset">Reset</button>
+<button id='run'>Run it</button>
+<button id='reset'>Reset</button>
