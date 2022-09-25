@@ -50,3 +50,13 @@ const st = new OrderedSet<number>([1, 2, 3], (x, y) => y - x);
 ````
 
 Both `OrderedSet` and `OrderedMap` automatically sort `key`, and the value of `value` in `OrderedSet` is fixed to `undefined`.
+
+## Enable iterator index
+
+Since recording and computing tree container iterator indexes require additional time and space overhead, this feature is disabled by default but can be enabled by setting the `enableIndex` passed in when the container is initialized to `true`.
+
+```typescript
+new OrderedSet([1, 2, 3], undefined, true).begin().next().index; // 1
+```
+
+**According to testing, enabling this feature will cause the performance of the insert function to decrease by about 10%.**

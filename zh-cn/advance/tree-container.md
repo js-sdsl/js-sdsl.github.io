@@ -50,3 +50,13 @@ const st = new OrderedSet<number>([1, 2, 3], (x, y) => y - x);
 ```
 
 `OrderedSet` 和 `OrderedMap` 都是自动对 `key` 排序的，`OrderedSet` 内的 `value` 值固定为 `undefined`
+
+## 启用迭代器索引
+
+由于记录和计算树容器迭代器索引需要额外的时空间开销，所以该功能默认是关闭的，可以通过设定容器初始化时传入的 `enableIndex` 为 `true` 进行启用
+
+```typescript
+new OrderedSet([1, 2, 3], undefined, true).begin().next().index; // 1
+```
+
+**根据测试显示启用该功能会导致插入函数的性能下降 10% 左右**

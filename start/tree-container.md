@@ -11,6 +11,9 @@ st.eraseElementByKey(4)     // O(logn)
 
 // custom comparison function
 new OrderedSet([1, 2, 3], (x, y) => x - y);
+
+// enable tree iterator index (enableIndex = true)
+console.log(new OrderedSet([1, 2], undefined, true).begin(),next().index);   // 1
 ```
 
 ## OrderedMap
@@ -29,6 +32,9 @@ mp = new OrderedMap(
     [1, 2, 3].map((element, index) => [index, element]),
     (x, y) => x - y
 );
+
+// enable tree iterator index (enableIndex = true)
+console.log(new OrderedMap([[0, 1], [1, 1]], undefined, true).begin(),next().index);   // 1
 ```
 
 ## Try it
