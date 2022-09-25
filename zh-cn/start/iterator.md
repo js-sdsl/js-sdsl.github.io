@@ -8,7 +8,7 @@ Js-sdsl 为所有可迭代容器重载了 `[Symbol.iterator]` 函数，用于 `f
 
 以 Vector 为例
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 for (const u of v) {
     console.log(u);     // 1, 2, 3
@@ -23,19 +23,24 @@ for (const u of v) {
 
 **注意，pre 和 next 会改变该对象内原有的指针位置，就像 C++ 中 `++it` 一样，it 本身也会被改变**
 
-```javascript
+```typescript
+import type { IteratorType } from 'js-sdsl';
+
 const v = new Vector([1, 2, 3]);
 let it = v.begin();
 console.log(it.pointer);        // 1
-console.log(it.iteratorType);   // 'normal'
+console.log(
+    it.iteratorType ===
+    IteratorType.NORMAL
+);                              // true
 it = it.next();
 console.log(it.pointer);        // 2
 it = it.pre();
 console.log(it.pointer);        // 1
 
 for (
-    let i = v.begin(); 
-    !i.equals(v.end()); 
+    let i = v.begin();
+    !i.equals(v.end());
     i = i.next()
 ) {
     console.log(i.pointer);     // 1, 2, 3
@@ -43,7 +48,10 @@ for (
 
 it = v.rBegin();
 console.log(it.pointer);        // 3
-console.log(it.iteratorType);   // 'reverse'
+console.log(
+    it.iteratorType ===
+    VectorIterator.REVERSE
+);                              // true
 it = it.next();
 console.log(it.pointer);        // 2
 it = it.pre();

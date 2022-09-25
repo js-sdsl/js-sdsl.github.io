@@ -8,7 +8,7 @@ In addition to this, we provide C++ STL-like bidirectional iterators for sequent
 
 Take Vector as an example:
 
-```javascript
+```typescript
 const v = new Vector([1, 2, 3]);
 for (const u of v) {
     console.log(u);     // 1, 2, 3
@@ -23,13 +23,15 @@ Since there is no concept of pointers in Js, Js-sdsl simulates `*` operations by
 
 **Note that pre and next will change the original pointer position in the object, just like `++it` in C++, it itself will also be changed.**
 
-```javascript
+```typescript
+import type { IteratorType } from 'js-sdsl';
+
 const v = new Vector([1, 2, 3]);
 let it = v.begin();
 console.log(it.pointer);        // 1
 console.log(
-    it.iteratorType === 
-    VectorIterator.NORMAL
+    it.iteratorType ===
+    IteratorType.NORMAL
 );                              // true
 it = it.next();
 console.log(it.pointer);        // 2

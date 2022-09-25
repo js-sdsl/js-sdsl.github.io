@@ -17,5 +17,5 @@ const que = new PriorityQueue(
     // this will create a small root heap, the default is a large root heap
     (x, y) => x - y
 );
-for(const x of arr) que.push(x);    // O(nlogn)
+for (const x of arr) que.push(x);    // O(nlogn)
 ```

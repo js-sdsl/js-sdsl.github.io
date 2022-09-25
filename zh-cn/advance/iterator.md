@@ -5,9 +5,12 @@ Js-sdsl 为顺序容器和树容器实现了类 C++ 的双向迭代器
 ContainerIterator 是所有迭代器的抽象父类，由于 Js 中没有指针的概念，我们在该类上添加了 `pointer` 属性来模拟 `*` 运算符，并且使用 `get/set` 来模拟指针的赋/取值
 
 ```typescript
+const enum IteratorType {
+    NORMAL = 0,
+    REVERSE = 1
+}
+
 abstract class ContainerIterator<T> {
-    static readonly NORMAL = false;
-    static readonly REVERSE = true;
     /**
      * @description Iterator's type.
      */

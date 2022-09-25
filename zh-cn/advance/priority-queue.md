@@ -15,5 +15,5 @@ const que = new PriorityQueue(
     arr,                                // 初始化传入 arr，这样做的复杂度是 O(n)
     (x, y) => x - y                     // 这样做会创建一个小根堆，而默认是大根堆
 );
-for(const x of arr) que.push(x);        // O(nlogn)
+for (const x of arr) que.push(x);        // O(nlogn)
 ```
