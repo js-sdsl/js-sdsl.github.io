@@ -28,3 +28,4 @@
   - [API 文档](/zh-cn/more/api-document.md)
   - [CHANGELOG](/zh-cn/more/changelog)
   - [加入我们](/zh-cn/more/join-us.md)
+  - [是个别包](/more/isolate-pacakges.md)
