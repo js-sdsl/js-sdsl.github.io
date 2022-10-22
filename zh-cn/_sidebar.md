@@ -27,4 +27,5 @@
 - **更多**
   - [API 文档](/zh-cn/more/api-document.md)
   - [CHANGELOG](/zh-cn/more/changelog)
+  - [赞助商](/zh-cn/more/sponsors.md)
   - [加入我们](/zh-cn/more/join-us.md)
