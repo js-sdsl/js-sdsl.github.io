@@ -28,4 +28,3 @@
   - [API Document](/more/api-document.md)
   - [CHANGELOG](/more/changelog)
   - [Join Us](/more/join-us.md)
-  - [Isolate Packages](/more/isolate-pacakges.md)
