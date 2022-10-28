@@ -187,11 +187,11 @@
       tableStyle.innerHTML = '';
     }
     const coverpages = window.$docsify.coverpage;
-    const mathResult = coverpages.some(
+    const matchResult = coverpages.some(
       page => urlHash === `#${page}`
     );
     const mainStyle = document.getElementById('main-style');
-    if (mathResult) {
+    if (matchResult) {
       mainStyle.innerHTML = 'body>main{display:none;}';
     } else {
       mainStyle.innerHTML = '';
