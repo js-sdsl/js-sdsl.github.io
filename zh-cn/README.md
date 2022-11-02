@@ -2,7 +2,7 @@
 
 [English](https://github.com/js-sdsl/js-sdsl.github.io/blob/main/README.md) | 简体中文
 
-刚项目由 docsify 引擎驱动，访问地址：[https://js-sdsl.github.io/](https://js-sdsl.github.io/#/zh-cn/)
+刚项目由 docsify 引擎驱动，访问地址：[https://js-sdsl.org/](https://js-sdsl.org/#/zh-cn/)
 
 目前支持 `English` 和 `简体中文`
 
