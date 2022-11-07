@@ -25,7 +25,7 @@ When traversing the Deque, it starts from `map[first][curFirst]` and ends at `ma
 
 When the space inside the Deque is not enough, it will automatically expand the capacity. By default, it will expand to twice the current memory space. Since we use `map` to store the first address of each bucket, we **don't need to move elements** when expanding the capacity but **move the pointer**.
 
-This makes Deque achieve an amortized `O(1)` time complexity when inserting elements, and found in [Benchmark](/zh-cn/test/benchmark) Faster than [`denque`](https://github.com/invertase/denque)!
+This makes Deque achieve an amortized `O(1)` time complexity when inserting elements, and found in [Benchmark](/test/benchmark) Faster than [`denque`](https://github.com/invertase/denque)!
 
 And in benchmark we find the performance of `pushFront` is nearly equals to `Array.push`.
 

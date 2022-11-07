@@ -4,7 +4,7 @@ Like C++, we provide three sequential containers: Vector, LinkList and Deque.
 
 ## Vector
 
-For the basic introduction, see [Base](/zh-cn/start/base.md).
+For the basic introduction, see [Base](/start/base.md).
 
 Vector can insert and delete data from the tail, but is not good at doing it elsewhere.
 

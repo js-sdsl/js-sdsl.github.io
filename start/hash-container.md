@@ -1,4 +1,8 @@
-Hash containers, also known as unordered associative containers, also store key-value pair elements; the difference is that by default, associative containers sort the stored elements in ascending order, while unordered associative containers do not. meeting.
+Hash containers, also named as unordered associative containers, which store key-value pair elements.
+
+The difference between associative containers is that associative containers sort the stored elements in ascending order while unordered associative containers do not.
+
+Hash container can insert all the basic type element including `object`.
 
 ## HashSet
 

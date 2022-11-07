@@ -1,5 +1,3 @@
-
-
 In addition to the above containers, Js-sdsl also provides three adapters: stack, queue and priority queue.
 
 ## Stack
