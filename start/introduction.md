@@ -4,16 +4,16 @@ Js-sdsl is a JavaScript standard data structure library implemented with referen
 
 If you have some research on C++ STL libraries, then Js-sdsl is completely pediatric for you, we provide **almost all data structures** in C++ STL:
 
-- Vector
-- Stack
-- Queue
-- LinkList
-- Deque
-- PriorityQueue
-- OrderedSet
-- OrderedMap
-- HashSet
-- HashMap
+- **Stack** - first in first out stack.
+- **Queue** - first in last out queue.
+- **PriorityQueue** - heap-implemented priority queue.
+- **Vector** - protected array, cannot to operate properties like `length` directly.
+- **LinkList** - linked list of non-contiguous memory addresses.
+- **Deque** - double-ended-queue, O(1) time complexity to `unshift` or getting elements by index.
+- **OrderedSet** - sorted set which implemented by red black tree.
+- **OrderedMap** - sorted map which implemented by red black tree.
+- **HashSet** - refer to the [polyfill of ES6 Set](https://github.com/rousan/collections-es6).
+- **HashMap** - refer to the [polyfill of ES6 Map](https://github.com/rousan/collections-es6).
 
 Unlike other Js data structure libraries, Js-sdsl is completely self-contained. It is written in TypeScript, has strict type deduction, and is implemented with reference to OOP. All containers have a common ancestor.
 

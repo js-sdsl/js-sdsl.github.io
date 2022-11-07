@@ -4,16 +4,16 @@ Js-sdsl 是一款参考 C++ STL 实现的 JavaScript 标准数据结构库，用
 
 如果你对 C++ STL 库有一定研究的话，那么 Js-sdsl 对你来说完全是小儿科，我们提供 C++ STL 中的**几乎所有数据结构**:
 
-- Vector
-- Stack
-- Queue
-- LinkList
-- Deque
-- PriorityQueue
-- OrderedSet
-- OrderedMap
-- HashSet
-- HashMap
+- **Stack** - 先进先出的堆栈
+- **Queue** - 先进后出的队列
+- **PriorityQueue** - 堆实现的优先级队列
+- **Vector** - 受保护的数组，不能直接操作像 `length` 这样的属性
+- **LinkList** - 非连续内存地址的链表
+- **Deque** - 双端队列，向前和向后插入元素或按索引获取元素的时间复杂度为 O(1)
+- **OrderedSet** - 由红黑树实现的排序集合
+- **OrderedMap** - 由红黑树实现的排序字典
+- **HashSet** - 参考 [ES6 Set polyfill](https://github.com/rousan/collections-es6) 实现的哈希集合
+- **HashMap** - 参考 [ES6 Set polyfill](https://github.com/rousan/collections-es6) 实现的哈希字典
 
 与其他的 Js 数据结构库不同的是，Js-sdsl 完全自成一派，其使用 TypeScript 进行编写，有着严格的类型推导，并且参照 OOP 进行实现，所有的容器拥有共同的祖先
 
