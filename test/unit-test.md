@@ -11,27 +11,27 @@ The support platform versions as follows:
 <table>
   <tr>
     <td>
-      <img alt="IE / Edge" src="https://www.w3schools.com/images/compatible_edge2020.png" />
+      <img alt="IE / Edge" src="/assets/image/platform/edge.png" />
       <div>IE / Edge</div>
     </td>
     <td>
-      <img alt="Firefox" src="https://www.w3schools.com/images/compatible_firefox2020.png" />
+      <img alt="Firefox" src="/assets/image/platform/firefox.png" />
       <div>Firefox</div>
     </td>
     <td>
-      <img alt="Chrome" src="https://www.w3schools.com/images/compatible_chrome2020.png" />
+      <img alt="Chrome" src="/assets/image/platform/chrome.png" />
       <div>Chrome</div>
     </td>
     <td>
-      <img alt="Safari" src="https://www.w3schools.com/images/compatible_safari2020.png" />
+      <img alt="Safari" src="/assets/image/platform/safari.png" />
       <div>Safari</div>
     </td>
     <td>
-      <img alt="Opera" src="https://www.w3schools.com/images/compatible_opera2020.png" />
+      <img alt="Opera" src="/assets/image/platform/opera.png" />
       <div>Opera</div>
     </td>
     <td>
-      <img alt="NodeJs" src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" width="20" />
+      <img alt="NodeJs" src="/assets/image/platform/nodejs.png" />
       <div>NodeJs</div>
     </td>
   </tr>

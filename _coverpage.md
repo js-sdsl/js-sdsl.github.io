@@ -1,4 +1,4 @@
-![Js-sdsl](../assets/logo-removebg.png)
+![Js-sdsl](/assets/image/logo/logo-removebg.png)
 
 > Javascript Standard Data Structure Library
 

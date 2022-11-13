@@ -32,7 +32,7 @@
         '/': '/README'
       },
       coverpage: ['/zh-cn/', '/'],
-      logo: '/assets/logo-small.png',
+      logo: '/assets/image/logo/logo-small.png',
       count: {
         countable: true,
         fontsize: '1em',
