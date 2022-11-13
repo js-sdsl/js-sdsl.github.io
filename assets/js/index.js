@@ -169,14 +169,21 @@
         clearInterval(tryId);
       }
     }, 1000);
-    const postDateId = setInterval(function () {
-      const postDate = document.getElementById('post-date');
-      if (!postDate) return;
-      if (postDate.innerText.indexOf('docsify-updated') >= 0) {
-        postDate.parentElement.remove();
-      }
-      clearInterval(postDateId);
-    }, 100);
+    if (urlHash.includes('/more/changelog')) {
+      const postDateId = setInterval(function () {
+        try {
+          const postDate = document.getElementById('post-date');
+          if (!postDate) return;
+          if (postDate.innerText.indexOf('docsify-updated') >= 0) {
+            postDate.parentElement.remove();
+          }
+          clearInterval(postDateId);
+        } catch (e) {
+          console.error(e);
+          clearInterval(postDateId);
+        }
+      }, 100);
+    }
     const lang = urlHash.startsWith('#/zh-cn') ? 'zh-cn' : 'en';
     document.documentElement.setAttribute('lang', lang);
     const tableStyle = document.getElementById('table-style');
