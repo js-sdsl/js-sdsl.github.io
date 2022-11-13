@@ -1,4 +1,4 @@
-div#root {
+div#app {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +75,7 @@ section.cover .cover-main {
   padding: 0.8em;
   border: 1px solid #cdcdcd;
   border-radius: 0.25rem;
+  word-break: break-word;
 }
 #run {
   width: 100px;
