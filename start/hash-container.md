@@ -4,17 +4,18 @@ The difference between associative containers is that associative containers sor
 
 Hash container can insert all the basic type element including `object`.
 
+We save the insertion order and return elements in the insertion order when traversing.
+
 ## HashSet
 
 Unordered collection, all stored elements cannot be the same, support custom hash function.
 
 ```typescript
 const st = new HashSet([1, 2, 3]);
-st.insert(4);               // O(1) ~ O(n)
-st.eraseElementByKey(4)     // O(1) ~ O(n)
-
-// custom hash function
-new HashSet([1, 2, 3], x => Number(x));
+st.insert(4);               // O(1)
+st.eraseElementByKey(4)     // O(1)
+// We save the insertion order.
+st.forEach(el => console.log(el));  // 1, 2, 3
 ```
 
 ## HashMap
@@ -22,34 +23,22 @@ new HashSet([1, 2, 3], x => Number(x));
 Unordered key-value pair mapping set, automatically hash the key, the keys of all stored elements cannot be the same, support custom hash function.
 
 ```typescript
-let mp = new HashMap(
+const mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
-mp.setElement(1, 2);        // O(1) ~ O(n)
-mp.eraseElementByKey(1)     // O(1) ~ O(n)
-
-// custom hash function
-mp = new HashMap(
-    [1, 2, 3].map((element, index) => [index, element]),
-    undefined,
-    x => Number(x)
-);
+mp.setElement(1, 2);        // O(1)
+mp.eraseElementByKey(1)     // O(1)
 ```
 
 ## Try it
 
 <p>
 <textarea id='input'>
-let mp = new HashMap(
+const mp = new HashMap(
     [1, 2, 3].map((element, index) => [index, element])
 );
-mp.setElement(1, 2);        // O(1) ~ O(n)
-mp.eraseElementByKey(1)     // O(1) ~ O(n)
-mp = new HashMap(
-    [1, 2, 3].map((element, index) => [index, element]),
-    undefined,
-    x => Number(x)
-);
+mp.setElement(1, 2);        // O(1)
+mp.eraseElementByKey(1)     // O(1)
 mp.forEach(([key, value]) => console.log([key, value]));
 </textarea>
 </p>

@@ -17,7 +17,7 @@ class Deque<T> {
 }
 ````
 
-<p align='center'><img src='/assets/deque.png' alt='deque memory map'></p>
+<p align='center'><img src='/assets/image/deque.png' alt='deque memory map'></p>
 
 The memory in the Deque is allocated on demand, so you don't have to worry about wasting memory
 
