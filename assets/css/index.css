@@ -26,12 +26,14 @@ section.cover .cover-main {
 }
 .markdown-section {
   overflow: auto;
+  margin: 0 auto;
   max-width: 800px;
-  margin: 0 0 0 300px;
+}
+.sidebar-toggle {
+  cursor: pointer;
 }
 @media screen and (max-width: 1700px) {
   .markdown-section {
-    margin: 0 auto;
     padding-left: 50px;
     padding-right: 50px;
   }

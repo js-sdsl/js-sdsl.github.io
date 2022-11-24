@@ -203,6 +203,17 @@
     } else {
       mainStyle.innerHTML = '';
     }
+    setTimeout(function () {
+      const links = [...document.querySelectorAll('nav a')];
+      links.forEach(link => link.onclick = function (e) {
+        e.preventDefault();
+        const oldHash = links.filter(function (link) {
+          return urlHash.includes(link.getAttribute('href'));
+        }).pop().getAttribute('href');
+        const newHash = link.getAttribute('href');
+        location.hash = urlHash.replace(oldHash, newHash);
+      });
+    }, 500);
   }
   window.$docsify = getDocsifyConfig();
   window.addEventListener('load', zoomWindow);
