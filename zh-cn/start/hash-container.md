@@ -43,4 +43,3 @@ mp.forEach(([key, value]) => console.log([key, value]));
 
 <button id='run'>Run it</button>
 <button id='reset'>Reset</button>
-

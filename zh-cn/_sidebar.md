@@ -1,6 +1,7 @@
 - [**README**](/zh-cn/README.md 'Js-sdsl README')
 - **基础**
   - [介绍](/zh-cn/start/introduction.md)
+  - [Why Js-sdsl](/zh-cn/start/why.md)
   - [抽象父类 Base](/zh-cn/start/base.md)
   - [顺序容器](/zh-cn/start/sequential-container.md)
   - [树容器](/zh-cn/start/tree-container.md)

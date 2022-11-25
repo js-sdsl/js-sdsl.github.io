@@ -1,6 +1,7 @@
 - [**README**](/README.md 'Js-sdsl README')
 - **Getting Started**
   - [Introduction](/start/introduction.md)
+  - [Why Js-sdsl](/start/why.md)
   - [Base](/start/base.md 'super abstract class Base')
   - [SequentialContainer](/start/sequential-container.md)
   - [TreeContainer](/start/tree-container.md)
