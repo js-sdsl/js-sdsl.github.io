@@ -4,8 +4,8 @@ Js-sdsl is a JavaScript standard data structure library implemented with referen
 
 If you have some research on C++ STL libraries, then Js-sdsl is completely pediatric for you, we provide **almost all data structures** in C++ STL:
 
-- **Stack** - first in first out stack.
-- **Queue** - first in last out queue.
+- **Stack** - first in last out stack.
+- **Queue** - first in first out queue.
 - **PriorityQueue** - heap-implemented priority queue.
 - **Vector** - protected array, cannot to operate properties like `length` directly.
 - **LinkList** - linked list of non-contiguous memory addresses.

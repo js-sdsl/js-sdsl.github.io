@@ -84,8 +84,8 @@ const st = new OrderedSet(arr, (x, y) => {
 
 In order to solve the above problems, we provide Js-sdsl, a **lightweight and efficient** data structure library, which aims to create a complete Js data structure ecology, improve development efficiency and code performance. At present, we provide the following data structures. In the future, we will make it richer.
 
-- **Stack** - first in first out stack.
-- **Queue** - first in last out queue.
+- **Stack** - first in last out stack.
+- **Queue** - first in first out queue.
 - **PriorityQueue** - heap-implemented priority queue.
 - **Vector** - protected array, cannot to operate properties like `length` directly.
 - **LinkList** - linked list of non-contiguous memory addresses.
