@@ -4,10 +4,9 @@ We have conducted strict unit tests on each function of each container, and all 
 
 We also run `js-sdsl` in difference browsers and node versions to test its compatibility including `firefox 31` and `node 10`.
 
-<style>.markdown-section>table{display:table;text-align:center;}</style>
-
 The support platform versions as follows:
 
+<style>.markdown-section>table{display:table;text-align:center;}</style>
 <table>
   <tr>
     <td>

@@ -10,6 +10,7 @@ E.g.
 
 ## Version list
 
+- [v4.2.0](https://js-sdsl.org/js-sdsl/previous/v4.2.0/index.html)
 - [v4.2.0-beta.1](https://js-sdsl.org/js-sdsl/previous/v4.2.0-beta.1/index.html)
 - [v4.2.0-beta.0](https://js-sdsl.org/js-sdsl/previous/v4.2.0-beta.0/index.html)
 - [v4.1.5](https://js-sdsl.org/js-sdsl/previous/v4.1.5/index.html)

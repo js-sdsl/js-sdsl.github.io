@@ -6,30 +6,31 @@ Js-sdsl 使用 [karma](https://karma-runner.github.io/) 和 [mocha](https://moch
 
 以下是支持的各平台版本：
 
+<style>.markdown-section>table{display:table;text-align:center;}</style>
 <table>
   <tr>
     <td>
-      <img alt="IE / Edge" src="/assets/platform/edge.png" />
+      <img alt="IE / Edge" src="/assets/image/platform/edge.png" />
       <div>IE / Edge</div>
     </td>
     <td>
-      <img alt="Firefox" src="/assets/platform/firefox.png" />
+      <img alt="Firefox" src="/assets/image/platform/firefox.png" />
       <div>Firefox</div>
     </td>
     <td>
-      <img alt="Chrome" src="/assets/platform/chrome.png" />
+      <img alt="Chrome" src="/assets/image/platform/chrome.png" />
       <div>Chrome</div>
     </td>
     <td>
-      <img alt="Safari" src="/assets/platform/safari.png" />
+      <img alt="Safari" src="/assets/image/platform/safari.png" />
       <div>Safari</div>
     </td>
     <td>
-      <img alt="Opera" src="/assets/platform/opera.png" />
+      <img alt="Opera" src="/assets/image/platform/opera.png" />
       <div>Opera</div>
     </td>
     <td>
-      <img alt="NodeJs" src="/assets/platform/nodejs.png" />
+      <img alt="NodeJs" src="/assets/image/platform/nodejs.png" />
       <div>NodeJs</div>
     </td>
   </tr>
