@@ -49,8 +49,8 @@ for (
 it = v.rBegin();
 console.log(it.pointer);        // 3
 console.log(
-    it.iteratorType ===
-    VectorIterator.REVERSE
+    it.iteratorType === 
+    IteratorType.REVERSE
 );                              // true
 it = it.next();
 console.log(it.pointer);        // 2

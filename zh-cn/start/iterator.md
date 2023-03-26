@@ -50,7 +50,7 @@ it = v.rBegin();
 console.log(it.pointer);        // 3
 console.log(
     it.iteratorType ===
-    VectorIterator.REVERSE
+    IteratorType.REVERSE
 );                              // true
 it = it.next();
 console.log(it.pointer);        // 2

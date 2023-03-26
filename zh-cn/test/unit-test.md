@@ -6,42 +6,15 @@ Js-sdsl 使用 [karma](https://karma-runner.github.io/) 和 [mocha](https://moch
 
 以下是支持的各平台版本：
 
-<style>.markdown-section>table{display:table;text-align:center;}</style>
-<table>
-  <tr>
-    <td>
-      <img alt="IE / Edge" src="/assets/image/platform/edge.png" />
-      <div>IE / Edge</div>
-    </td>
-    <td>
-      <img alt="Firefox" src="/assets/image/platform/firefox.png" />
-      <div>Firefox</div>
-    </td>
-    <td>
-      <img alt="Chrome" src="/assets/image/platform/chrome.png" />
-      <div>Chrome</div>
-    </td>
-    <td>
-      <img alt="Safari" src="/assets/image/platform/safari.png" />
-      <div>Safari</div>
-    </td>
-    <td>
-      <img alt="Opera" src="/assets/image/platform/opera.png" />
-      <div>Opera</div>
-    </td>
-    <td>
-      <img alt="NodeJs" src="/assets/image/platform/nodejs.png" />
-      <div>NodeJs</div>
-    </td>
-  </tr>
-  <tr>
-    <td>Edge 12</td>
-    <td>31</td>
-    <td>49</td>
-    <td>10</td>
-    <td>36</td>
-    <td>10</td>
-  </tr>
-</table>
+| ![][Edge-Icon]<br/>IE / Edge | ![][Firefox-Icon]<br/>Firefox | ![][Chrome-Icon]<br/>Chrome | ![][Safari-Icon]<br/>Safari | ![][Opera-Icon]<br/>Opera | ![][NodeJs-Icon]<br/>NodeJs |
+|:----------------------------:|:-----------------------------:|:---------------------------:|:---------------------------:|:-------------------------:|:---------------------------:|
+|           Edge 12            |              36               |             49              |             10              |            36             |             10              |
 
 单元测试的代码可以在[这里](https://github.com/js-sdsl/js-sdsl/tree/main/test)找到
+
+[Edge-Icon]: https://js-sdsl.org/assets/image/platform/edge.png
+[Firefox-Icon]: https://js-sdsl.org/assets/image/platform/firefox.png
+[Chrome-Icon]: https://js-sdsl.org/assets/image/platform/chrome.png
+[Safari-Icon]: https://js-sdsl.org/assets/image/platform/safari.png
+[Opera-Icon]: https://js-sdsl.org/assets/image/platform/opera.png
+[NodeJs-Icon]: https://js-sdsl.org/assets/image/platform/nodejs.png

@@ -6,42 +6,15 @@ We also run `js-sdsl` in difference browsers and node versions to test its compa
 
 The support platform versions as follows:
 
-<style>.markdown-section>table{display:table;text-align:center;}</style>
-<table>
-  <tr>
-    <td>
-      <img alt="IE / Edge" src="/assets/image/platform/edge.png" />
-      <div>IE / Edge</div>
-    </td>
-    <td>
-      <img alt="Firefox" src="/assets/image/platform/firefox.png" />
-      <div>Firefox</div>
-    </td>
-    <td>
-      <img alt="Chrome" src="/assets/image/platform/chrome.png" />
-      <div>Chrome</div>
-    </td>
-    <td>
-      <img alt="Safari" src="/assets/image/platform/safari.png" />
-      <div>Safari</div>
-    </td>
-    <td>
-      <img alt="Opera" src="/assets/image/platform/opera.png" />
-      <div>Opera</div>
-    </td>
-    <td>
-      <img alt="NodeJs" src="/assets/image/platform/nodejs.png" />
-      <div>NodeJs</div>
-    </td>
-  </tr>
-  <tr>
-    <td>Edge 12</td>
-    <td>31</td>
-    <td>49</td>
-    <td>10</td>
-    <td>36</td>
-    <td>10</td>
-  </tr>
-</table>
+| ![][Edge-Icon]<br/>IE / Edge | ![][Firefox-Icon]<br/>Firefox | ![][Chrome-Icon]<br/>Chrome | ![][Safari-Icon]<br/>Safari | ![][Opera-Icon]<br/>Opera | ![][NodeJs-Icon]<br/>NodeJs |
+|:----------------------------:|:-----------------------------:|:---------------------------:|:---------------------------:|:-------------------------:|:---------------------------:|
+|           Edge 12            |              36               |             49              |             10              |            36             |             10              |
 
 The code for the unit test can be found [here](https://github.com/js-sdsl/js-sdsl/tree/main/test).
+
+[Edge-Icon]: https://js-sdsl.org/assets/image/platform/edge.png
+[Firefox-Icon]: https://js-sdsl.org/assets/image/platform/firefox.png
+[Chrome-Icon]: https://js-sdsl.org/assets/image/platform/chrome.png
+[Safari-Icon]: https://js-sdsl.org/assets/image/platform/safari.png
+[Opera-Icon]: https://js-sdsl.org/assets/image/platform/opera.png
+[NodeJs-Icon]: https://js-sdsl.org/assets/image/platform/nodejs.png
